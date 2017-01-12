@@ -30,6 +30,14 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-scr-plugin</artifactId>
+                <executions>
+                	<execution>
+                		<id>generate-scr-descriptor</id>
+                		<goals>
+                			<goal>scr</goal>
+                		</goals>
+                	</execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -43,6 +51,9 @@
                             artifactId2;inline=true
                         </Embed-Dependency>
                         -->
+                        <Embed-Dependency>commons-dbutils;scope=compile</Embed-Dependency>
+                        <Embed-Directory>OSGI-INF/lib</Embed-Directory>
+                        <_exportcontents>org.apache.commons.dbutils</_exportcontents>
                         <Sling-Model-Packages>com.epam.aem.training.core</Sling-Model-Packages>
                     </instructions>
                 </configuration>
@@ -61,9 +72,9 @@
                         <groupId>org.apache.sling</groupId>
                         <artifactId>maven-sling-plugin</artifactId>
                         <configuration>
-                            <!-- Note that this requires /apps/training-app/install to exist!!          -->
+                            <!-- Note that this requires /apps/apps/install to exist!!          -->
                             <!--    This is typically the case when ui.apps is deployed first                -->
-                            <!--    Otherwise, create /apps/training-app/install manually (CRXDE|Lite)  -->
+                            <!--    Otherwise, create /apps/apps/install manually (CRXDE|Lite)  -->
                             <slingUrlSuffix>/apps/training-app/install/</slingUrlSuffix>
                             <failOnError>true</failOnError>
                         </configuration>
@@ -127,5 +138,16 @@
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
         </dependency>
+        <dependency>
+        	<groupId>commons-dbutils</groupId>
+        	<artifactId>commons-dbutils</artifactId>
+        	<version>1.6</version>
+        </dependency>
+        <dependency>
+    		<groupId>com.adobe.acs</groupId>
+    		<artifactId>acs-aem-commons-bundle</artifactId>
+    		<version>2.9.0</version>
+    		<scope>provided</scope>
+		</dependency>
     </dependencies>
 </project>
