@@ -24,7 +24,7 @@ import com.adobe.acs.commons.util.BufferingResponse;
 
 @SlingFilter(generateComponent=true, generateService=true, order = -700, scope = SlingFilterScope.REQUEST)
 @Properties({
-	@Property(name="sling.filter.pattern", value="/content/geometrixx/.*", propertyPrivate=false),
+	@Property(name="sling.filter.pattern", value="/content(/campaigns)?/geometrixx/.*", propertyPrivate=false),
 	@Property(name=ChangeCompanyNameFilter.PROPERTY_NAME, value=ChangeCompanyNameFilter.DEFAULT_NAME)
 })
 public class ChangeCompanyNameFilter implements Filter {
