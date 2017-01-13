@@ -129,6 +129,11 @@
                             <artifactId>training.bundle</artifactId>
                             <target>/apps/training-app/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.epam.aem</groupId>
+                            <artifactId>training.rotateBundle</artifactId>
+                            <target>/apps/training-app/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -206,6 +211,12 @@
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.bundle</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.epam.aem</groupId>
+            <artifactId>training.rotateBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

@@ -21,10 +21,10 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>training.bundle</artifactId>
+    <artifactId>training.rotateBundle</artifactId>
     <packaging>bundle</packaging>
-    <name>Training Project - Bundle</name>
-    <description>My bundle for Training Project</description>
+    <name>Training Project - rotateBundle</name>
+    <description>Rotate bundle for Training Project</description>
     <build>
         <plugins>
             <plugin>
@@ -51,10 +51,7 @@
                             artifactId2;inline=true
                         </Embed-Dependency>
                         -->
-                        <Embed-Dependency>commons-dbutils;scope=compile</Embed-Dependency>
-                        <Embed-Directory>OSGI-INF/lib</Embed-Directory>
-                        <_exportcontents>org.apache.commons.dbutils</_exportcontents>
-                        <Sling-Model-Packages>com.epam.aem.training.core</Sling-Model-Packages>
+                       <Sling-Model-Packages>com.epam.aem.training.core</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
@@ -139,21 +136,10 @@
             <artifactId>junit-addons</artifactId>
         </dependency>
         <dependency>
-        	<groupId>commons-dbutils</groupId>
-        	<artifactId>commons-dbutils</artifactId>
-        	<version>1.6</version>
-        </dependency>
-        <dependency>
     		<groupId>com.adobe.acs</groupId>
     		<artifactId>acs-aem-commons-bundle</artifactId>
     		<version>2.9.0</version>
     		<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.epam.aem</groupId>
-			<artifactId>training.rotateBundle</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>provided</scope>
 		</dependency>
     </dependencies>
 </project>
