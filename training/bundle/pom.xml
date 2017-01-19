@@ -45,16 +45,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <!--
-                        <Embed-Dependency>
-                            artifactId1,
-                            artifactId2;inline=true
-                        </Embed-Dependency>
-                        -->
-                        <Embed-Dependency>commons-dbutils;scope=compile</Embed-Dependency>
-                        <Embed-Directory>OSGI-INF/lib</Embed-Directory>
-                        <_exportcontents>org.apache.commons.dbutils</_exportcontents>
-                        <Sling-Model-Packages>com.epam.aem.training.core</Sling-Model-Packages>
+                        <Sling-Model-Packages>com.epam.aem.training.bundle</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
@@ -72,9 +63,6 @@
                         <groupId>org.apache.sling</groupId>
                         <artifactId>maven-sling-plugin</artifactId>
                         <configuration>
-                            <!-- Note that this requires /apps/apps/install to exist!!          -->
-                            <!--    This is typically the case when ui.apps is deployed first                -->
-                            <!--    Otherwise, create /apps/apps/install manually (CRXDE|Lite)  -->
                             <slingUrlSuffix>/apps/training-app/install/</slingUrlSuffix>
                             <failOnError>true</failOnError>
                         </configuration>
@@ -107,14 +95,6 @@
         </dependency>
         <!-- Other Dependencies -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.jcr</groupId>
-            <artifactId>jcr</artifactId>
-        </dependency>
-        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
         </dependency>
@@ -123,37 +103,13 @@
             <artifactId>aem-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.sling</groupId>
-            <artifactId>org.apache.sling.models.api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit-addons</groupId>
-            <artifactId>junit-addons</artifactId>
-        </dependency>
-        <dependency>
-        	<groupId>commons-dbutils</groupId>
-        	<artifactId>commons-dbutils</artifactId>
-        	<version>1.6</version>
-        </dependency>
-        <dependency>
     		<groupId>com.adobe.acs</groupId>
     		<artifactId>acs-aem-commons-bundle</artifactId>
-    		<version>2.9.0</version>
-    		<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.epam.aem</groupId>
 			<artifactId>training.rotateBundle</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<scope>provided</scope>
 		</dependency>
     </dependencies>
 </project>

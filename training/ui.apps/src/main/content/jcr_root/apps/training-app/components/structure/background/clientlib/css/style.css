@@ -1,0 +1,10 @@
+.background-image{
+    	background-position: 50% 0px;
+    	background-size: 100% auto;
+    	position: fixed;
+    	top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: -10;
+}

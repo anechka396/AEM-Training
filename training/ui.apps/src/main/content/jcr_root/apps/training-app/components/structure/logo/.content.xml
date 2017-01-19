@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2011-06-16T11:24:17.010-04:00"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
     jcr:primaryType="cq:Component"
-    jcr:title="Logo"
-    sling:resourceSuperType="foundation/components/logo"
-    componentGroup=".hidden"/>
+    jcr:title="Horizon Logo"
+    sling:hideChildren="[cq:dialog,design_dialog]"
+    sling:resourceSuperType="wcm/foundation/components/image"
+    allowedParents="[*/parsys]"
+    componentGroup="Orion2"/>

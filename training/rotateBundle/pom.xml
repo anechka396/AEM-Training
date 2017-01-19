@@ -23,7 +23,7 @@
     </parent>
     <artifactId>training.rotateBundle</artifactId>
     <packaging>bundle</packaging>
-    <name>Training Project - rotateBundle</name>
+    <name>Training Project - Rotate Bundle</name>
     <description>Rotate bundle for Training Project</description>
     <build>
         <plugins>
@@ -45,20 +45,13 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <!--
-                        <Embed-Dependency>
-                            artifactId1,
-                            artifactId2;inline=true
-                        </Embed-Dependency>
-                        -->
-                       <Sling-Model-Packages>com.epam.aem.training.core</Sling-Model-Packages>
+                       <Sling-Model-Packages>com.epam.aem.training.rotateBundle</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <profiles>
-        <!-- Development profile: install only the bundle -->
         <profile>
             <id>autoInstallBundle</id>
             <activation>
@@ -69,9 +62,6 @@
                         <groupId>org.apache.sling</groupId>
                         <artifactId>maven-sling-plugin</artifactId>
                         <configuration>
-                            <!-- Note that this requires /apps/apps/install to exist!!          -->
-                            <!--    This is typically the case when ui.apps is deployed first                -->
-                            <!--    Otherwise, create /apps/apps/install manually (CRXDE|Lite)  -->
                             <slingUrlSuffix>/apps/training-app/install/</slingUrlSuffix>
                             <failOnError>true</failOnError>
                         </configuration>
@@ -102,44 +92,10 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
         </dependency>
-        <!-- Other Dependencies -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.jcr</groupId>
-            <artifactId>jcr</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-        </dependency>
+        
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.sling</groupId>
-            <artifactId>org.apache.sling.models.api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit-addons</groupId>
-            <artifactId>junit-addons</artifactId>
-        </dependency>
-        <dependency>
-    		<groupId>com.adobe.acs</groupId>
-    		<artifactId>acs-aem-commons-bundle</artifactId>
-    		<version>2.9.0</version>
-    		<scope>provided</scope>
-		</dependency>
     </dependencies>
 </project>

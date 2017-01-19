@@ -33,14 +33,17 @@ public class RotateImageServlet extends SlingSafeMethodsServlet {
 			IOException {
 		Resource resource = request.getResource();
 		Resource imageResource = request.getResourceResolver().resolve(resource.getPath().replaceAll(".ud", ""));
+		
 		if(!ResourceUtil.isNonExistingResource(imageResource)){
 			Asset imageAsset = imageResource.adaptTo(Asset.class);
 			Rendition original = imageAsset.getOriginal();
 			Layer layer = new Layer(original.getStream());
+			
 			Layer rotatedLayer = rotateService.rotateLayer(layer);
+			
+			rotatedLayer.write(rotatedLayer.getMimeType(), 1.0, response.getOutputStream());
 			response.setContentType(rotatedLayer.getMimeType());
 			response.setStatus(HttpServletResponse.SC_OK);
-			rotatedLayer.write(rotatedLayer.getMimeType(), 1.0, response.getOutputStream());
 		}else {
             response.sendError(SlingHttpServletResponse.SC_NOT_FOUND);
         }

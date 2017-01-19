@@ -115,7 +115,6 @@
                 <extensions>true</extensions>
                 <configuration>
                     <filterSource>${basedir}/META-INF/vault/filter.xml</filterSource>
-                    <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>training-package</group>
                     <embeddeds>
@@ -135,6 +134,14 @@
                             <target>/apps/training-app/install</target>
                         </embedded>
                     </embeddeds>
+                    <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+                    <subPackages>
+            			<subPackage>
+                			<groupId>com.adobe.acs</groupId>
+                			<artifactId>acs-aem-commons-content</artifactId>
+                			<filter>true</filter>
+            			</subPackage>
+        			</subPackages>
                 </configuration>
             </plugin>
         </plugins>
@@ -146,8 +153,6 @@
     <profiles>
         <profile>
             <id>autoInstallPackage</id>
-            <activation>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -155,25 +160,19 @@
                         <artifactId>content-package-maven-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>install-package</id>
+                                <id>content-package</id>
+                                <phase>install</phase>
                                 <goals>
                                     <goal>install</goal>
                                 </goals>
                             </execution>
                         </executions>
-                        <configuration>
-                            <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
-                            <failOnError>true</failOnError>
-                            <failOnMissingEmbed>true</failOnMissingEmbed>
-                        </configuration>
                      </plugin>
                  </plugins>
             </build>
         </profile>
         <profile>
             <id>autoInstallPackagePublish</id>
-            <activation>
-            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -181,7 +180,8 @@
                         <artifactId>content-package-maven-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>install-package</id>
+                                <id>content-package</id>
+                                <phase>install</phase>
                                 <goals>
                                     <goal>install</goal>
                                 </goals>
@@ -189,8 +189,8 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
-                            <failOnError>true</failOnError>
-                            <failOnMissingEmbed>true</failOnMissingEmbed>
+                            <username>${vault.user>}</username>
+                            <password>${vault.password}</password>
                         </configuration>
                      </plugin>
                  </plugins>
@@ -239,5 +239,12 @@
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
+        
+        <dependency>
+    			<groupId>com.adobe.acs</groupId>
+    			<artifactId>acs-aem-commons-content</artifactId>
+    			<version>2.9.0</version>
+    			<type>content-package</type>
+			</dependency>
     </dependencies>
 </project>
