@@ -17,11 +17,8 @@ import com.epam.aem.training.search.services.SearchService;
 
 public class QueryManagerService implements SearchService {
 
-	@Override
-	public String getServiceName() {
-		return this.getClass().getName();
-	}
-
+	private static final String queryString = "SELECT * FROM [nt:base] AS s WHERE CONTAINS(*, '%s') AND ISDESCENDANTNODE(s,'%s')";
+	
 	@Override
 	public List<String> getSearchResults(String text, String path,
 			ResourceResolver resolver) {
@@ -30,8 +27,7 @@ public class QueryManagerService implements SearchService {
 		Session session = resolver.adaptTo(Session.class);
 		try {
 			QueryManager queryManager = session.getWorkspace().getQueryManager();
-			Query query = queryManager.createQuery("SELECT * FROM [nt:base] AS s WHERE CONTAINS(*, '"+ text + "') AND  " +
-					"ISDESCENDANTNODE(s,'"+ path +"')", Query.JCR_SQL2);
+			Query query = queryManager.createQuery(String.format(queryString, text, path), Query.JCR_SQL2);
 			QueryResult result = query.execute();
 			NodeIterator iterator = result.getNodes();
 			while(iterator.hasNext()){
