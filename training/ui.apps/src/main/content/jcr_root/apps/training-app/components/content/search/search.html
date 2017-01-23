@@ -1,4 +1,4 @@
 <h1>Search component</h1>
-<sly data-sly-use.search="com.epam.aem.training.search.models.SearchModel">
-	SearchModel says: ${search.message}
-</sly>
+<ul data-sly-use.search="com.epam.aem.training.search.models.SearchModel" data-sly-list.path="${search.searchResults}">
+	<li>${path}</li>
+</ul>

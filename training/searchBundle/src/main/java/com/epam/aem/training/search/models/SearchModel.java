@@ -1,11 +1,15 @@
 package com.epam.aem.training.search.models;
 
-import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Source;
 
 import com.epam.aem.training.search.factories.SearchFactory;
 import com.epam.aem.training.search.services.SearchService;
@@ -21,21 +25,19 @@ public class SearchModel {
 	
 	@Inject @Default(values="API not selected")
 	protected String searchAPI;
+	
+	@Inject @Source("sling-object")
+	ResourceResolver resourceResolver;
 
-private String message;
-	
-	@PostConstruct
-    protected void init() {
-        message = "\tText: " + text + "\n" + 
-        		"\tPath: " + path + "\n" + 
-        		"\tSearch API: " + searchAPI + "\n";
-        SearchService searchService = SearchFactory.getInstance().getSearchService(searchAPI);
+	private List<String> searchResults = new ArrayList<>();
+
+	public List<String> getSearchResults() {
+		SearchService searchService = SearchFactory.getInstance().getSearchService(searchAPI);
         if(searchService != null){
-        	message += "\tSearch API class: " + searchService.getServiceName() + "\n";
+        	searchResults = searchService.getSearchResults(text, path, resourceResolver);
         }
-    }
+		return searchResults;
+	}
 	
-	public String getMessage() {
-        return message;
-    }
+	
 }
