@@ -21,7 +21,10 @@ public class SearchModel {
 	protected String text;
 	
 	@Inject @Default(values="Empty Path")
-	protected String path;
+	protected String path1;
+	
+	@Inject @Default(values="Empty Path")
+	protected String path2;
 	
 	@Inject @Default(values="API not selected")
 	protected String searchAPI;
@@ -34,10 +37,8 @@ public class SearchModel {
 	public List<String> getSearchResults() {
 		SearchService searchService = SearchFactory.getInstance().getSearchService(searchAPI);
         if(searchService != null){
-        	searchResults = searchService.getSearchResults(text, path, resourceResolver);
+        	searchResults = searchService.getSearchResults(text, path1, path2, resourceResolver);
         }
 		return searchResults;
 	}
-	
-	
 }

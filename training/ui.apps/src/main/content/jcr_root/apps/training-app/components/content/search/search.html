@@ -1,4 +1,10 @@
 <h1>Search component</h1>
+<ul>
+  <li>Text: ${properties.text}</li>
+  <li>Path 1: ${properties.path1}</li>
+  <li>Path 2: ${properties.path2}</li>
+  <li>Search API: ${properties.searchAPI}</li>
+</ul>
 <ul data-sly-use.search="com.epam.aem.training.search.models.SearchModel" data-sly-list.path="${search.searchResults}">
 	<li>${path}</li>
 </ul>

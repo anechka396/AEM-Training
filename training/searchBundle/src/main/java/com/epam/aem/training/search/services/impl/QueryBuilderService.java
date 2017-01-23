@@ -20,13 +20,16 @@ import com.epam.aem.training.search.services.SearchService;
 public class QueryBuilderService implements SearchService{
 	
 	private static final String FULLTEXT = "fulltext";
-	private static final String PATH = "path";
 	private static final String TYPE = "type";
 	private static final String BASE = "nt:base";
+	private static final String GROUP_OR_PATH = "group.p.or";
+	private static final String GROUP_PATH_1 = "group.1_path";
+	private static final String GROUP_PATH_2 = "group.2_path";
+	private static final String TRUE = "true";
 
 	@Override
-	public List<String> getSearchResults(String text, String path,
-			ResourceResolver resolver) {
+	public List<String> getSearchResults(String text, String path1,
+			String path2, ResourceResolver resolver) {
 		List<String> searchResults = new ArrayList<>();
 		
 		try{
@@ -35,8 +38,10 @@ public class QueryBuilderService implements SearchService{
 		
 			Map<String, String> propertyMap = new HashMap<>();
 			propertyMap.put(FULLTEXT, text);
-			propertyMap.put(PATH, path);
 			propertyMap.put(TYPE, BASE);
+			propertyMap.put(GROUP_OR_PATH, TRUE);
+			propertyMap.put(GROUP_PATH_1, path1);
+			propertyMap.put(GROUP_PATH_2, path2);
 		
 			Query query = queryBuilder.createQuery(PredicateGroup.create(propertyMap), session);
 			SearchResult result = query.getResult();
