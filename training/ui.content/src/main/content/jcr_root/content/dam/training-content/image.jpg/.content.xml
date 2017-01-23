@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
     jcr:isCheckedOut="{Boolean}true"
     jcr:mixinTypes="[mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="14b54b07-46f3-42eb-88de-7ba9213850e7">
-    <jcr:content
-        cq:name="image.jpg"
-        cq:parentPath="/content/dam/training-content"
-        jcr:lastModified="{Date}2017-01-23T12:02:40.035+03:00"
-        jcr:lastModifiedBy="admin"
-        jcr:primaryType="dam:AssetContent">
-        <metadata
-            dam:Bitsperpixel="{Long}24"
-            dam:Comments="CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 95&#xa;&#xa;"
-            dam:extracted="{Date}2017-01-17T11:49:49.520+03:00"
-            dam:Fileformat="JPEG"
-            dam:MIMEtype="image/jpeg"
-            dam:Numberofimages="{Long}1"
-            dam:Numberoftextualcomments="{Long}1"
-            dam:Physicalheightindpi="{Long}72"
-            dam:Physicalheightininches="{Decimal}15.0"
-            dam:Physicalwidthindpi="{Long}72"
-            dam:Physicalwidthininches="{Decimal}26.66666603088379"
-            dam:Progressive="no"
-            dam:sha1="836c61be431de58db41d9e5948f23bfafce471fd"
-            dam:size="{Long}378399"
-            dc:format="image/jpeg"
-            dc:modified="{Date}2017-01-23T12:02:40.035+03:00"
-            jcr:lastModified="{Date}2017-01-23T12:02:40.034+03:00"
-            jcr:lastModifiedBy="admin"
-            jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"
-            tiff:ImageLength="{Long}1080"
-            tiff:ImageWidth="{Long}1920"/>
-        <related jcr:primaryType="nt:unstructured"/>
-    </jcr:content>
-</jcr:root>
+    jcr:uuid="14b54b07-46f3-42eb-88de-7ba9213850e7"/>

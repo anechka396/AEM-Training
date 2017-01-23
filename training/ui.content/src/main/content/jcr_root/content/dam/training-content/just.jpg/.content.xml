@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
     jcr:isCheckedOut="{Boolean}true"
     jcr:mixinTypes="[mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="ee36c478-b310-4e79-9761-cf31b2c42e1b">
-    <jcr:content
-        cq:name="just.jpg"
-        cq:parentPath="/content/dam/training-content"
-        jcr:lastModified="{Date}2017-01-23T12:02:40.135+03:00"
-        jcr:lastModifiedBy="admin"
-        jcr:primaryType="dam:AssetContent">
-        <metadata
-            dam:Bitsperpixel="{Long}24"
-            dam:ExifOffset="{Long}46"
-            dam:extracted="{Date}2017-01-17T11:49:49.549+03:00"
-            dam:Fileformat="JPEG"
-            dam:MIMEtype="image/jpeg"
-            dam:Numberofimages="{Long}1"
-            dam:Numberoftextualcomments="{Long}0"
-            dam:Physicalheightindpi="{Long}-1"
-            dam:Physicalheightininches="{Decimal}-1.0"
-            dam:Physicalwidthindpi="{Long}-1"
-            dam:Physicalwidthininches="{Decimal}-1.0"
-            dam:Progressive="no"
-            dam:sha1="f1ea798952a39d2065c544d54b244f612936d0d5"
-            dam:size="{Long}663874"
-            dc:format="image/jpeg"
-            dc:modified="{Date}2017-01-23T12:02:40.135+03:00"
-            exif:ExifImageLength="{Long}1000"
-            exif:ExifImageWidth="{Long}1600"
-            jcr:lastModified="{Date}2017-01-23T12:02:40.135+03:00"
-            jcr:lastModifiedBy="admin"
-            jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"
-            tiff:ImageLength="{Long}1000"
-            tiff:ImageWidth="{Long}1600"
-            xmp:CreatorTool="Google"/>
-        <related jcr:primaryType="nt:unstructured"/>
-    </jcr:content>
-</jcr:root>
+    jcr:uuid="ee36c478-b310-4e79-9761-cf31b2c42e1b"/>
