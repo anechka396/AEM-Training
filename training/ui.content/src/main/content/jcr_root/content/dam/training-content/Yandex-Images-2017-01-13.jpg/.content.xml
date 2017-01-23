@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="94b671c7-a06d-43e3-bac3-d182f7c17b64">
     <jcr:content
-        jcr:lastModified="{Date}2017-01-17T11:50:03.415+03:00"
+        cq:name="Yandex-Images-2017-01-13.jpg"
+        cq:parentPath="/content/dam/training-content"
+        jcr:lastModified="{Date}2017-01-23T12:02:39.938+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -20,6 +25,9 @@
             dam:sha1="f5e582788e5f46d90ec8c4cdcea79efe93a97244"
             dam:size="{Long}899763"
             dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-23T12:02:39.938+03:00"
+            jcr:lastModified="{Date}2017-01-23T12:02:39.938+03:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}1440"

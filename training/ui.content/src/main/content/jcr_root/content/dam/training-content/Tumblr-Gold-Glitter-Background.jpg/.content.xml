@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="ea454cc3-c926-4936-acb1-2ef78dff9a4c">
     <jcr:content
-        jcr:lastModified="{Date}2017-01-17T11:49:50.186+03:00"
+        cq:name="Tumblr-Gold-Glitter-Background.jpg"
+        cq:parentPath="/content/dam/training-content"
+        jcr:lastModified="{Date}2017-01-23T12:02:39.844+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -20,6 +25,9 @@
             dam:sha1="65a7026d060b548e6aebc96c5a1ad6ffd194e2f5"
             dam:size="{Long}82792"
             dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-23T12:02:39.844+03:00"
+            jcr:lastModified="{Date}2017-01-23T12:02:39.844+03:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}400"

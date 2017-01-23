@@ -20,11 +20,25 @@
 /**
  * Image component JS Use-api script
  */
-use(["image.js"], function (imagePromise) {
+use(["image.js", "../utils/ResourceUtils.js"], function (imagePromise, ResourceUtils) {
     imagePromise.then(function(image) {
         if (image.linkUrl()) {
         	image.linkUrl = Packages.com.day.orion.web.helpers.URLResolver.resolveLocalizedHtmlLink(request, image.linkUrl());
         }
+
+
+       /* ResourceUtils.getResource(image.fileReference() + "/jcr:content/metadata")
+                .then(function (fileResourceContent) {
+                     var width = fileResourceContent.properties["tiff:ImageWidth"];
+                     if (image.width <= 0) {
+        				image.width = width;
+    				 }
+
+                     var height = fileResourceContent.properties["tiff:ImageLength"];
+                     if (image.height <= 0) {
+        				image.height = height;
+    				 }
+                });*/
     })
 
     return imagePromise;

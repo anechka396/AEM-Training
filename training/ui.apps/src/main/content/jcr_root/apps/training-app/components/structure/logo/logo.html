@@ -22,12 +22,18 @@
     data-sly-unwrap="${!logo.linkUrl}"
     href="${logo.linkUrl}"
     >
+      <sly data-sly-use.info="${'Logo' @ text=logo.fileReference}">
+      	<sly sly data-sly-test="${logo.width==''}"><sly data-sly-test.width="${info.width}"></sly></sly>
+      	<sly sly data-sly-test="${logo.width!=''}"><sly data-sly-test.width="${logo.width}"></sly></sly>
+      	<sly sly data-sly-test="${logo.height==''}"><sly data-sly-test.height="${info.height}"></sly></sly>
+        <sly sly data-sly-test="${logo.height!=''}"><sly data-sly-test.height="${logo.height}"></sly></sly>
+      </sly>
     <img
-        src="${logo.src}"
+        src="${logo.fileReference}"
         alt="${logo.alt}"
         title="${logo.alt}"
-        width="${logo.width}"
-        height="${logo.height}"
+        width="${width}"
+        height="${height}"
         class="${logo.cssClass}"
         data-emptytext="Logo Placeholder"
         usemap="${logo.imageMaps.hash}"/>

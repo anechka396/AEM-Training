@@ -33,8 +33,6 @@
             sling:resourceType="training-app/components/structure/background"
             fileName="Yandex-Images-2017-01-13.jpg"
             height="0"
-            width="0">
-            <file/>
-        </background>
+            width="0"/>
     </jcr:content>
 </jcr:root>
