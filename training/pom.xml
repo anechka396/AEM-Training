@@ -30,11 +30,12 @@
         <module>it.tests</module>
         <module>it.launcher</module>
         <module>rotateBundle</module>
+        <module>searchBundle</module>
     </modules>
 
     <properties>
         <aem.host>localhost</aem.host>
-        <aem.port>4502</aem.port>
+        <aem.port>4503</aem.port>
         <aem.publish.host>localhost</aem.publish.host>
         <aem.publish.port>4504</aem.publish.port>
         <sling.user>admin</sling.user>
