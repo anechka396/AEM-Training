@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f4c3de69-881d-4f21-9a60-2cc869302235">
     <jcr:content
-        jcr:lastModified="{Date}2017-01-23T14:30:20.178+03:00"
+        cq:name="image.jpg"
+        cq:parentPath="/content/dam/training-content"
+        jcr:lastModified="{Date}2017-01-24T12:09:12.469+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:Comments="CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 95&#xa;&#xa;"
-            dam:extracted="{Date}2017-01-23T14:30:19.330+03:00"
+            dam:extracted="{Date}2017-01-24T12:09:10.272+03:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -18,9 +23,12 @@
             dam:Physicalwidthindpi="{Long}72"
             dam:Physicalwidthininches="{Decimal}26.66666603088379"
             dam:Progressive="no"
-            dam:sha1="836c61be431de58db41d9e5948f23bfafce471fd"
-            dam:size="{Long}378399"
+            dam:sha1="5f3c70779b84e5de3e687fa37ab565fd4c74d19e"
+            dam:size="{Long}381462"
             dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-24T12:09:09.689+03:00"
+            jcr:lastModified="{Date}2017-01-24T12:09:09.689+03:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}1080"

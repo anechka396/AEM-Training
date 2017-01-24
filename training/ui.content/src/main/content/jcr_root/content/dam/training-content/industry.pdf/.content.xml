@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="ce8690ad-336b-44b9-9900-f26c32888464">
     <jcr:content
-        jcr:lastModified="{Date}2017-01-23T14:26:53.057+03:00"
+        cq:name="industry.pdf"
+        cq:parentPath="/content/dam/training-content"
+        jcr:lastModified="{Date}2017-01-24T12:09:12.061+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Author="Hanna Yakubenka"
-            dam:extracted="{Date}2017-01-23T14:26:52.639+03:00"
+            dam:extracted="{Date}2017-01-24T12:09:08.566+03:00"
             dam:numPages="{Long}1"
             dam:Producer="Microsoft® Word 2016"
             dam:sha1="d9652f6268e80dc9fcef0e06b91fcf2a1ee213e3"
             dam:size="{Long}275604"
             dc:creator="Hanna Yakubenka"
             dc:format="application/pdf"
+            dc:modified="{Date}2017-01-24T12:09:11.672+03:00"
+            jcr:lastModified="{Date}2017-01-24T12:09:11.671+03:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             pdf:Producer="Microsoft® Word 2016"

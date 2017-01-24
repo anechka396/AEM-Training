@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="843c976d-f051-4517-b12f-d07389227a79">
     <jcr:content
-        jcr:lastModified="{Date}2017-01-23T14:30:20.440+03:00"
+        cq:name="just.jpg"
+        cq:parentPath="/content/dam/training-content"
+        jcr:lastModified="{Date}2017-01-24T12:09:12.142+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:ExifOffset="{Long}46"
-            dam:extracted="{Date}2017-01-23T14:30:19.414+03:00"
+            dam:extracted="{Date}2017-01-24T12:09:08.112+03:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -18,11 +23,14 @@
             dam:Physicalwidthindpi="{Long}-1"
             dam:Physicalwidthininches="{Decimal}-1.0"
             dam:Progressive="no"
-            dam:sha1="f1ea798952a39d2065c544d54b244f612936d0d5"
-            dam:size="{Long}663874"
+            dam:sha1="0a5d181c3abeca303b54235c93861a93fb9e8e77"
+            dam:size="{Long}666928"
             dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-24T12:09:07.110+03:00"
             exif:ExifImageLength="{Long}1000"
             exif:ExifImageWidth="{Long}1600"
+            jcr:lastModified="{Date}2017-01-24T12:09:07.109+03:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}1000"
