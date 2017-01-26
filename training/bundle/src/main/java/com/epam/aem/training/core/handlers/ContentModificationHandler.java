@@ -22,6 +22,8 @@ import com.day.cq.wcm.api.PageModification;
 })
 public class ContentModificationHandler implements EventHandler {
 	
+	private static final String REGEXP = "^/content/training-content/[^/]+";
+	
 	private final Logger LOG = LoggerFactory.getLogger(this.getClass().getName());
 
 	@Override
@@ -31,7 +33,9 @@ public class ContentModificationHandler implements EventHandler {
 		
 		while(modifications.hasNext()){
 			PageModification modification = modifications.next();
-			LOG.debug(modification.toString());
+			if(modification.getPath().matches(REGEXP)){
+				LOG.debug(modification.toString());
+			}
 		}
 	}
 

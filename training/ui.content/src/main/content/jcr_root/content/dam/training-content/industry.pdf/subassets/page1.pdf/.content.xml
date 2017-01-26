@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
-    <jcr:content jcr:primaryType="dam:AssetContent">
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="e172ebe4-2f47-4c08-b52f-c88f21e4d380">
+    <jcr:content
+        cq:name="page1.pdf"
+        cq:parentPath="/content/dam/training-content/industry.pdf/subassets"
+        jcr:lastModified="{Date}2017-01-31T20:04:41.754+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
         <metadata
+            dam:extracted="{Date}2017-01-31T20:04:41.508+03:00"
+            dam:numPages="{Long}1"
+            dam:sha1="320db1f82c20b52bd91d35937bda29ccf55de730"
+            dam:size="{Long}274750"
+            dc:format="application/pdf"
+            dc:modified="{Date}2017-01-31T20:04:41.566+03:00"
+            jcr:lastModified="{Date}2017-01-31T20:04:41.566+03:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>
