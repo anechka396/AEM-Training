@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2017-01-24T14:58:09.265+03:00"
+        cq:lastModified="{Date}2017-01-26T12:09:51.821+03:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/training-app/templates/page-content"
         jcr:primaryType="cq:PageContent"
@@ -38,27 +38,16 @@
             <search_608333232
                 jcr:created="{Date}2017-01-23T13:18:01.804+03:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2017-01-24T12:25:26.086+03:00"
+                jcr:lastModified="{Date}2017-01-26T12:09:51.819+03:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="training-app/components/content/search"
                 path="[/content/dam/training-content]"
                 path1="/content/geometrixx"
                 path2="/content/dam"
-                searchAPI="QueryManager"
+                searchAPI="QueryBuilder"
                 text="industry leadership"
                 textIsRich="true"/>
-            <search_503435125
-                jcr:created="{Date}2017-01-23T16:48:59.000+03:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2017-01-23T16:49:10.514+03:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="training-app/components/content/search"
-                path1="/content/geometrixx"
-                path2="/content/dam"
-                searchAPI="QueryManager"
-                text="industry leadership"/>
         </par>
         <background-container
             jcr:primaryType="nt:unstructured"

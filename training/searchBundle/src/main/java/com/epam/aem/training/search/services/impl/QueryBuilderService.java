@@ -23,8 +23,10 @@ public class QueryBuilderService implements SearchService{
 	private static final String TYPE = "type";
 	private static final String BASE = "nt:base";
 	private static final String GROUP_OR_PATH = "group.p.or";
-	private static final String GROUP_PATH_1 = "group.1_path";
-	private static final String GROUP_PATH_2 = "group.2_path";
+	private static final String GROUP_1_PATH = "group.1_group.path";
+	private static final String GROUP_2_PATH = "group.2_group.path";
+	private static final String GROUP_2_NODENAME = "group.2_group.nodename";
+	private static final String PDF_FILE = "*.pdf";
 	private static final String TRUE = "true";
 
 	@Override
@@ -40,8 +42,9 @@ public class QueryBuilderService implements SearchService{
 			propertyMap.put(FULLTEXT, text);
 			propertyMap.put(TYPE, BASE);
 			propertyMap.put(GROUP_OR_PATH, TRUE);
-			propertyMap.put(GROUP_PATH_1, path1);
-			propertyMap.put(GROUP_PATH_2, path2);
+			propertyMap.put(GROUP_1_PATH, path1);
+			propertyMap.put(GROUP_2_PATH, path2);
+			propertyMap.put(GROUP_2_NODENAME, PDF_FILE);
 		
 			Query query = queryBuilder.createQuery(PredicateGroup.create(propertyMap), session);
 			SearchResult result = query.getResult();

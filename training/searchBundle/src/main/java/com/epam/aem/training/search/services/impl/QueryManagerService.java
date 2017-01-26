@@ -17,7 +17,7 @@ import com.epam.aem.training.search.services.SearchService;
 
 public class QueryManagerService implements SearchService {
 
-	private static final String queryString = "SELECT * FROM [nt:base] AS s WHERE CONTAINS(*, '%s') AND (ISDESCENDANTNODE(s,'%s') or ISDESCENDANTNODE(s,'%s'))";
+	private static final String queryString = "SELECT * FROM [nt:base] AS s WHERE CONTAINS(*, '%s') AND (ISDESCENDANTNODE(s,'%s') or (ISDESCENDANTNODE(s,'%s') AND NAME() LIKE '%%.pdf'))";
 	
 	@Override
 	public List<String> getSearchResults(String text, String path1,
