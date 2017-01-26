@@ -34,12 +34,17 @@ import com.epam.aem.training.core.utils.ResourceResolverUtil;
 public class ContentModificationHandler implements EventHandler {
 	
 	private static final String REGEXP = "^/content/training-content/[^/]+";
+<<<<<<< HEAD
 	private static final String EVENT_SERVICE = "eventService";
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 	
 	@Reference
 	ResourceResolverFactory resolverFactory;
+=======
+	
+	private final Logger LOG = LoggerFactory.getLogger(this.getClass().getName());
+>>>>>>> Created pages. Added path restrictions
 
 	@Override
 	public void handleEvent(Event event) {
@@ -48,6 +53,7 @@ public class ContentModificationHandler implements EventHandler {
 		
 		while(modifications.hasNext()){
 			PageModification modification = modifications.next();
+<<<<<<< HEAD
 			if(modification.getPath().matches(REGEXP) && 
 					modification.getType().equals(PageModification.ModificationType.MODIFIED)){
 				try {
@@ -61,6 +67,10 @@ public class ContentModificationHandler implements EventHandler {
 				} catch (LoginException | RepositoryException e) {
 					logger.error(e.getMessage());
 				}
+=======
+			if(modification.getPath().matches(REGEXP)){
+				LOG.debug(modification.toString());
+>>>>>>> Created pages. Added path restrictions
 			}
 		}
 	}
