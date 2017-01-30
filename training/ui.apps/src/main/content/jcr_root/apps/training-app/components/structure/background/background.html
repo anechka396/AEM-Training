@@ -1,4 +1,4 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
      data-sly-call="${clientlib.all @ categories='training-background'}"/>
-<div data-sly-test="${wcmmode.edit}">Choose image</div>
+<div class="cq-dd-background cq-placeholder file">Choose Image</div>
 <div class="background-image" data-sly-use.image="image.js">${image.fileReference}</div>
