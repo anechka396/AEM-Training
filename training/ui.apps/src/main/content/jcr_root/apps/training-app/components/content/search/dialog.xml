@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <text
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Text"
+            name="./text"
+            value="industry leadership"
+            xtype="textfield"/>
+        <path1
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Path 1"
+            name="./path1"
+            rootPath="/content/geometrixx"
+            value="/content/geometrixx"
+            xtype="pathfield"/>
+        <path2
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Path 2"
+            name="./path2"
+            rootPath="/content/dam"
+            value="/content/dam"
+            xtype="pathfield"/>
+        <searchAPI
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Search API"
+            name="./searchAPI"
+            type="radiogroup"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <manager
+                    jcr:primaryType="cq:Widget"
+                    text="QueryManager"
+                    value="QueryManager"/>
+                <builder
+                    jcr:primaryType="cq:Widget"
+                    text="QueryBuilder"
+                    value="QueryBuilder"/>
+            </options>
+        </searchAPI>
+    </items>
+</jcr:root>

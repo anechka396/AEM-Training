@@ -34,7 +34,7 @@
             </logo>
         </page>
     </jcr:content>
-    <clientlib-all/>
     <clientlib-site/>
+    <clientlib-all/>
     <favicon.ico/>
 </jcr:root>

@@ -3,16 +3,16 @@
     jcr:isCheckedOut="{Boolean}true"
     jcr:mixinTypes="[mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="ea454cc3-c926-4936-acb1-2ef78dff9a4c">
+    jcr:uuid="751281b4-1f03-49f2-a02f-7f9a6e21978d">
     <jcr:content
         cq:name="Tumblr-Gold-Glitter-Background.jpg"
         cq:parentPath="/content/dam/training-content"
-        jcr:lastModified="{Date}2017-01-23T12:02:39.844+03:00"
+        jcr:lastModified="{Date}2017-01-31T17:43:12.763+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2017-01-17T11:49:49.524+03:00"
+            dam:extracted="{Date}2017-01-31T17:43:12.297+03:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -22,11 +22,11 @@
             dam:Physicalwidthindpi="{Long}-1"
             dam:Physicalwidthininches="{Decimal}-1.0"
             dam:Progressive="no"
-            dam:sha1="65a7026d060b548e6aebc96c5a1ad6ffd194e2f5"
-            dam:size="{Long}82792"
+            dam:sha1="01aad4e9120dde5b24ba8b755e606d154554e9bf"
+            dam:size="{Long}85759"
             dc:format="image/jpeg"
-            dc:modified="{Date}2017-01-23T12:02:39.844+03:00"
-            jcr:lastModified="{Date}2017-01-23T12:02:39.844+03:00"
+            dc:modified="{Date}2017-01-24T12:09:07.558+03:00"
+            jcr:lastModified="{Date}2017-01-31T17:43:12.408+03:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

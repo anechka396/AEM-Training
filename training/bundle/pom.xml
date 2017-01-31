@@ -45,7 +45,6 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Sling-Model-Packages>com.epam.aem.training.bundle</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
