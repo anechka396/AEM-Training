@@ -30,6 +30,7 @@
                     <path2
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldDescription="Only .pdf files"
                         fieldLabel="Path"
                         name="./path2"
                         rootPath="/content/dam"
@@ -45,13 +46,13 @@
                                 sling:resourceType="granite/ui/components/foundation/form/radio"
                                 name="./searchAPI"
                                 text="QueryManager"
-                                value="QueryManager"/>
+                                value="QUERY_MANAGER"/>
                             <builder
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/foundation/form/radio"
                                 name="./searchAPI"
                                 text="QueryBuilder"
-                                value="QueryBuilder"/>
+                                value="QUERY_BUILDER"/>
                         </items>
                     </searchAPI>
                 </items>

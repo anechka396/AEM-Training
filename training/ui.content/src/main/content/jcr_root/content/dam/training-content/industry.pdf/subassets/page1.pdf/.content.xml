@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="dam:Asset">
-    <jcr:content
-        jcr:lastModified="{Date}2017-01-26T12:07:30.838+03:00"
-        jcr:lastModifiedBy="admin"
-        jcr:primaryType="dam:AssetContent">
+    <jcr:content jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2017-01-26T12:07:30.555+03:00"
-            dam:numPages="{Long}1"
-            dam:sha1="5c6706407985e43490b80b00012b716b7ddee923"
-            dam:size="{Long}274750"
-            dc:format="application/pdf"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>
