@@ -1,8 +1,6 @@
 package com.epam.aem.training.core.handlers;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
@@ -16,7 +14,6 @@ import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.resource.LoginException;
-import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventConstants;
@@ -24,8 +21,10 @@ import org.osgi.service.event.EventHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.day.cq.commons.jcr.JcrConstants;
 import com.day.cq.wcm.api.PageEvent;
 import com.day.cq.wcm.api.PageModification;
+import com.epam.aem.training.core.utils.ResourceResolverUtil;
 
 @Component
 @Service(EventHandler.class)
@@ -35,11 +34,9 @@ import com.day.cq.wcm.api.PageModification;
 public class ContentModificationHandler implements EventHandler {
 	
 	private static final String REGEXP = "^/content/training-content/[^/]+";
-	private static final String DEFAULT_USER = "admin";
-	private static final String CONTENT = "jcr:content";
-	private static final String DESCRIPTION = "jcr:description";
+	private static final String EVENT_SERVICE = "eventService";
 	
-	private final Logger LOG = LoggerFactory.getLogger(this.getClass().getName());
+	private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 	
 	@Reference
 	ResourceResolverFactory resolverFactory;
@@ -54,34 +51,24 @@ public class ContentModificationHandler implements EventHandler {
 			if(modification.getPath().matches(REGEXP) && 
 					modification.getType().equals(PageModification.ModificationType.MODIFIED)){
 				try {
-					Session session = getResourceResolver().adaptTo(Session.class);
+					Session session = ResourceResolverUtil.getServerResourceResolver(resolverFactory, 
+							EVENT_SERVICE).adaptTo(Session.class);
 					Node pageNode = session.getNode(modification.getPath());
-					Node contentNode = pageNode.getNode(CONTENT);
-					if(contentNode.hasProperty(DESCRIPTION)){
+					Node contentNode = pageNode.getNode(JcrConstants.JCR_CONTENT);
+					if(contentNode.hasProperty(JcrConstants.JCR_DESCRIPTION)){
 						createVersion(pageNode, session);
 					}
 				} catch (LoginException | RepositoryException e) {
-					LOG.error(e.getMessage());
+					logger.error(e.getMessage());
 				}
 			}
-			
-			LOG.debug(modification.toString());
 		}
-	}
-	
-	private ResourceResolver getResourceResolver() throws LoginException{
-		Map<String, Object> authenticationInfo = new HashMap<>();
-		authenticationInfo.put(ResourceResolverFactory.USER, DEFAULT_USER);
-		authenticationInfo.put(ResourceResolverFactory.PASSWORD, DEFAULT_USER.toCharArray());
-		ResourceResolver resourceResolver = resolverFactory.getResourceResolver(authenticationInfo);
-		return resourceResolver;
 	}
 	
 	private void createVersion(Node page, Session session) throws RepositoryException{
 		VersionManager versionManager = session.getWorkspace().getVersionManager();
-		Version version = versionManager.checkin(page.getPath());
-		versionManager.checkout(page.getPath());
-		LOG.debug(version.toString());
+		Version version = versionManager.checkpoint(page.getPath());
+		logger.debug(version.toString());
 	}
 
 }
