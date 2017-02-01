@@ -1,11 +1,20 @@
+<template data-sly-template.i18="${@ key, value}">
+	<span>${key @ i18n, source='user'}</span> 
+    <span data-sly-test="${value}">:  ${value}</span>
+</template>
+
 <sly data-sly-use.search="com.epam.aem.training.search.models.SearchModel"/>
-<h1>Search component</h1>
+
+<h1 data-sly-call="${i18 @ key='searchComponent'}"></h1>
+
 <ul>
-  <li>Text: ${search.text}</li>
-  <li>Path 1: ${search.path1}</li>
-  <li>Path 2: ${search.path2}</li>
-  <li>Search API: ${search.searchAPI}</li>
+  <li data-sly-call="${i18 @ key='text', value=search.text}"></li>
+  <li data-sly-call="${i18 @ key='path', value=search.path1}"></li>
+  <li data-sly-call="${i18 @ key='text', value=search.path2}"></li>
+  <li data-sly-call="${i18 @ key='searchAPI', value=search.searchAPI}"></li>
 </ul>
+
+<h3 data-sly-call="${i18 @ key='searchResult'}"></h3>
 <ul data-sly-list.path="${search.searchResults}">
 	<li>${path}</li>
 </ul>
