@@ -10,7 +10,6 @@
         cq:template="/apps/training-app/templates/page-home"
         jcr:description="Description"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Page with description 2"
         sling:resourceType="training-app/components/structure/page">
         <title
             jcr:primaryType="nt:unstructured"

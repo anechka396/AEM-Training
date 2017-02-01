@@ -6,4 +6,5 @@
     <filter root="/oak:index/trainingIndex" />
     <filter root="/home/users/system/u-j30KTHgCDj7NLo2yTG"/>
     <filter root="/rep:policy"/>
+    <filter root="/var/rep:policy"/>
 </workspaceFilter>

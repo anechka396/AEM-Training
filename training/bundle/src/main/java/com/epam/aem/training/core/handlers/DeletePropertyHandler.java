@@ -22,8 +22,6 @@ import org.osgi.service.event.EventHandler;
 })
 public class DeletePropertyHandler implements EventHandler{
 
-	private static final String PATH = "path";
-	private static final String REMOVED_ATTRIBUTES = "resourceRemovedAttributes";
 	private static final String JOB_TOPIC = "save/removal/property/info";
 	
 	@Reference
@@ -32,8 +30,8 @@ public class DeletePropertyHandler implements EventHandler{
 	@Override
 	public void handleEvent(Event event) {		
 		final Map<String, Object> jobProperties = new HashMap<>();
-		jobProperties.put(PATH, event.getProperty(PATH));
-		jobProperties.put(REMOVED_ATTRIBUTES, event.getProperty(REMOVED_ATTRIBUTES));
+		jobProperties.put(SlingConstants.PROPERTY_PATH, event.getProperty(SlingConstants.PROPERTY_PATH));
+		jobProperties.put(SlingConstants.PROPERTY_REMOVED_ATTRIBUTES, event.getProperty(SlingConstants.PROPERTY_REMOVED_ATTRIBUTES));
 		jobManager.addJob(JOB_TOPIC, jobProperties);
 	}
 
