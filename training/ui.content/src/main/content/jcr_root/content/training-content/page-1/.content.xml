@@ -5,7 +5,7 @@
     jcr:primaryType="cq:Page"
     jcr:uuid="f579e3f9-5fdb-4b39-9c43-91538e9b8b49">
     <jcr:content
-        cq:lastModified="{Date}2017-01-26T14:26:53.850+03:00"
+        cq:lastModified="{Date}2017-01-31T20:06:09.400+03:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/training-app/templates/page-home"
         jcr:description="Description"
@@ -26,6 +26,13 @@
                 sling:resourceType="training-app/components/content/text"
                 text="&lt;p>This is a home page&lt;/p>"
                 textIsRich="true"/>
+            <helloworld
+                jcr:created="{Date}2017-01-31T20:06:09.398+03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-31T20:06:09.398+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="training-app/components/content/helloworld"/>
         </par>
         <background-container
             jcr:primaryType="nt:unstructured"
