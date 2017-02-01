@@ -5,7 +5,7 @@
     jcr:primaryType="cq:Page"
     jcr:uuid="f579e3f9-5fdb-4b39-9c43-91538e9b8b49">
     <jcr:content
-        cq:lastModified="{Date}2017-01-26T14:26:53.850+03:00"
+        cq:lastModified="{Date}2017-01-31T20:06:09.400+03:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/training-app/templates/page-home"
         jcr:description="Description"
