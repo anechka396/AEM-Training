@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:lastModified="{Date}2017-02-03T15:55:07.866+03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AEM WF Training"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <dialog
+                jcr:created="{Date}2017-02-03T15:46:54.267+03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-02-03T15:55:07.851+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Step 1"
+                sling:resourceType="cq/workflow/components/model/dialog">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DIALOG_PATH="/etc/workflow/dialogs/cq:moveDialog"
+                    PARTICIPANT="administrators"/>
+            </dialog>
+            <process
+                jcr:created="{Date}2017-02-03T15:54:31.642+03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-02-03T15:54:55.722+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Step 2"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.epam.aem.training.workflow.processes.MovePageWorkflow"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+        </flow>
+        <model/>
+    </jcr:content>
+</jcr:root>

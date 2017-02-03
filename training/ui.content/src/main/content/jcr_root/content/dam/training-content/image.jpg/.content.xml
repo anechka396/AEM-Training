@@ -7,13 +7,13 @@
     <jcr:content
         cq:name="image.jpg"
         cq:parentPath="/content/dam/training-content"
-        jcr:lastModified="{Date}2017-01-31T17:43:13.322+03:00"
+        jcr:lastModified="{Date}2017-02-03T15:20:31.985+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:Comments="CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 95&#xa;&#xa;"
-            dam:extracted="{Date}2017-01-31T17:43:12.980+03:00"
+            dam:extracted="{Date}2017-02-03T15:20:31.461+03:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -27,7 +27,7 @@
             dam:size="{Long}381462"
             dc:format="image/jpeg"
             dc:modified="{Date}2017-01-24T12:09:09.689+03:00"
-            jcr:lastModified="{Date}2017-01-31T17:43:12.567+03:00"
+            jcr:lastModified="{Date}2017-02-03T15:20:31.597+03:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

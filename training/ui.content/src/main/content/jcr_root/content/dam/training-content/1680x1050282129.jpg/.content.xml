@@ -7,13 +7,13 @@
     <jcr:content
         cq:name="1680x1050282129.jpg"
         cq:parentPath="/content/dam/training-content"
-        jcr:lastModified="{Date}2017-01-31T17:43:13.177+03:00"
+        jcr:lastModified="{Date}2017-02-03T15:20:31.363+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:ExifOffset="{Long}72"
-            dam:extracted="{Date}2017-01-31T17:43:12.517+03:00"
+            dam:extracted="{Date}2017-02-03T15:20:28.554+03:00"
             dam:Fileformat="JPEG"
             dam:JpgFromRawLength="{Long}2274"
             dam:JpgFromRawStart="{Long}208"
@@ -33,7 +33,7 @@
             exif:ExifImageWidth="{Long}1600"
             exif:PixelXDimension="{Long}72"
             exif:PixelYDimension="{Long}72"
-            jcr:lastModified="{Date}2017-01-31T17:43:12.265+03:00"
+            jcr:lastModified="{Date}2017-02-03T15:20:30.384+03:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
