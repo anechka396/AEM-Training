@@ -32,7 +32,6 @@ public class MovePageWorkflow implements WorkflowProcess{
 	@Override
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap metaDataMap)
 			throws WorkflowException {
-		logger.debug("Training process executed: called from Java code");
 		WorkflowData workflowData = workItem.getWorkflowData();
 		if(workflowData.getPayloadType().equals(PayloadMap.TYPE_JCR_PATH)){
 			String currentPath = workflowData.getPayload().toString();

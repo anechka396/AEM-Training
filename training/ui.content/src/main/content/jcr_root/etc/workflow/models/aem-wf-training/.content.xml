@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/default"
-        cq:lastModified="{Date}2017-02-03T18:36:21.316+03:00"
+        cq:lastModified="{Date}2017-02-03T19:12:06.953+03:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/cq/workflow/templates/model"
         jcr:primaryType="cq:PageContent"
@@ -30,10 +30,11 @@
                     <dialog
                         jcr:created="{Date}2017-02-03T18:17:55.180+03:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2017-02-03T18:17:55.180+03:00"
+                        jcr:description="Admin should assign pathToMove property."
+                        jcr:lastModified="{Date}2017-02-03T19:10:48.617+03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Double click to enter a title"
+                        jcr:title="Step 1"
                         sling:resourceType="cq/workflow/components/model/dialog">
                         <metaData
                             jcr:primaryType="nt:unstructured"
@@ -48,11 +49,13 @@
                         jcr:created="{Date}2017-02-03T18:36:21.282+03:00"
                         jcr:createdBy="admin"
                         jcr:description="A no operation process"
-                        jcr:lastModified="{Date}2017-02-03T18:36:21.282+03:00"
+                        jcr:lastModified="{Date}2017-02-03T19:09:13.270+03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="No Operation"
-                        sling:resourceType="cq/workflow/components/workflow/noopprocess">
+                        sling:resourceType="cq/workflow/components/workflow/noopprocess"
+                        PROCESS="/etc/workflow/scripts/noop.ecma"
+                        PROCESS_AUTO_ADVANCE="true">
                         <metaData
                             jcr:primaryType="nt:unstructured"
                             PROCESS="/etc/workflow/scripts/noop.ecma"
@@ -63,10 +66,11 @@
             <process
                 jcr:created="{Date}2017-02-03T18:24:45.631+03:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2017-02-03T18:24:45.631+03:00"
+                jcr:description="Move page under moveToPath."
+                jcr:lastModified="{Date}2017-02-03T19:12:06.953+03:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                jcr:title="Double click to enter title."
+                jcr:title="Step 2"
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"

@@ -19,8 +19,8 @@
                         sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                         fieldLabel="Path to move"
                         name="./jcr:content/pathToMove"
-                        rootPath="/content/geometrixx"
-                        value="/content/geometrixx"/>
+                        rootPath="/content"
+                        value="/content"/>
                 </items>
             </column>
         </items>
