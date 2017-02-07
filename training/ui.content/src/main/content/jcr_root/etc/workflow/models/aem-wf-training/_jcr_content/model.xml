@@ -7,7 +7,7 @@
     description="No Description"
     title="AEM WF Training">
     <metaData
-        cq:lastModified="{Long}1486138335499"
+        cq:lastModified="{Long}1486479604371"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"/>
     <nodes jcr:primaryType="nt:unstructured">
@@ -76,7 +76,7 @@
         <node1_x0023_node3
             jcr:primaryType="cq:WorkflowTransition"
             from="node1"
-            rule="function check(){&#xa;   var path = workflowData.getPayload().toString();&#xa;   var node = workflowSession.getSession().getItem(path+&quot;/jcr:content&quot;);&#xa;   var b = !node.hasProperty(&quot;pathToMove&quot;);&#xa;   return b;&#xa;}"
+            rule="/etc/workflow/scripts/check-path-to-move-prop.ecma"
             to="node3">
             <metaData
                 jcr:primaryType="nt:unstructured"
@@ -91,7 +91,7 @@
         <node1_x0023_node4
             jcr:primaryType="cq:WorkflowTransition"
             from="node1"
-            rule="function check(){&#xa;   return true;&#xa;}"
+            rule="/etc/workflow/scripts/rule-true.ecma"
             to="node4">
             <metaData
                 jcr:primaryType="nt:unstructured"

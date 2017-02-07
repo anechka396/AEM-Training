@@ -28,6 +28,7 @@ public class MovePageWorkflow implements WorkflowProcess{
 	private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 	
 	private static final String PATH_TO_MOVE = "pathToMove";
+	private static final String DASH = "-";
 	
 	@Override
 	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap metaDataMap)
@@ -40,10 +41,14 @@ public class MovePageWorkflow implements WorkflowProcess{
 				Node pageNode = jcrSession.getNode(currentPath);
 				if(pageNode != null){
 					Node contentNode = pageNode.getNode(JcrConstants.JCR_CONTENT);
-					if(contentNode.hasProperty(PATH_TO_MOVE)){
+					if(contentNode != null && contentNode.hasProperty(PATH_TO_MOVE)){
 						String pathToMove = contentNode.getProperty(PATH_TO_MOVE).getString();
-						if(jcrSession.nodeExists(pathToMove) && !pathToMove.isEmpty() && !pathToMove.equals(currentPath)){
-							jcrSession.move(currentPath, pathToMove + FileSystem.SEPARATOR + pageNode.getName());
+						if(jcrSession.nodeExists(pathToMove) && !pathToMove.equals(currentPath)){
+							String newPath = pathToMove + FileSystem.SEPARATOR + pageNode.getName();
+							if(jcrSession.nodeExists(newPath)){
+								newPath = renameNode(newPath, jcrSession);
+							}
+							jcrSession.move(currentPath, newPath);
 							jcrSession.save();
 						}
 					}
@@ -53,6 +58,17 @@ public class MovePageWorkflow implements WorkflowProcess{
 			}
 			
 		}
+	}
+	
+	private String renameNode(String nodeName, Session session) throws RepositoryException{
+		int count = 1;
+		nodeName += DASH;
+		
+		while(session.nodeExists(nodeName + count)){
+			count++;
+		}
+		
+		return nodeName + count;
 	}
 
 }

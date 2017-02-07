@@ -7,4 +7,6 @@
     <filter root="/etc/workflow/dialogs"/>
     <filter root="/etc/workflow/launcher/config/-664531084"/>
     <filter root="/etc/workflow/models/aem-wf-training"/>
+    <filter root="/etc/workflow/scripts/check-path-to-move-prop.ecma"/>
+    <filter root="/etc/workflow/scripts/rule-true.ecma"/>
 </workspaceFilter>
