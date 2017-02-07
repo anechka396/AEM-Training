@@ -1,5 +1,5 @@
 <template data-sly-template.i18="${@ key, value}">
-	<span>${key @ i18n, source='user'}</span> 
+	<span>${key @ i18n, source='user', basename='training'}</span> 
     <span data-sly-test="${value}">:  ${value}</span>
 </template>
 
@@ -10,7 +10,7 @@
 <ul>
   <li data-sly-call="${i18 @ key='text', value=search.text}"></li>
   <li data-sly-call="${i18 @ key='path', value=search.path1}"></li>
-  <li data-sly-call="${i18 @ key='text', value=search.path2}"></li>
+  <li data-sly-call="${i18 @ key='path', value=search.path2}"></li>
   <li data-sly-call="${i18 @ key='searchAPI', value=search.searchAPI}"></li>
 </ul>
 
