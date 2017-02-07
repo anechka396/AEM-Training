@@ -31,6 +31,7 @@
         <module>it.launcher</module>
         <module>rotateBundle</module>
         <module>searchBundle</module>
+        <module>workflowBundle</module>
     </modules>
 
     <properties>

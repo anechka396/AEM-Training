@@ -5,4 +5,9 @@
     <filter root="/etc/packages/adobe/consulting/acs-aem-commons-content-2.9.0.zip" />
     <filter root="/oak:index/trainingIndex" />
     <filter root="/etc/languages"/>
+    <filter root="/etc/workflow/dialogs"/>
+    <filter root="/etc/workflow/launcher/config/-664531084"/>
+    <filter root="/etc/workflow/models/aem-wf-training"/>
+    <filter root="/etc/workflow/scripts/check-path-to-move-prop.ecma"/>
+    <filter root="/etc/workflow/scripts/rule-true.ecma"/>
 </workspaceFilter>

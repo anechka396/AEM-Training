@@ -55,7 +55,7 @@
         includedPaths="[/content/geometrixx,/content/dam]"
         queryPaths="[/content/geometrixx,/content/dam]"
         reindex="{Boolean}false"
-        reindexCount="{Long}6"
+        reindexCount="{Long}7"
         type="lucene">
         <aggregates jcr:primaryType="nt:unstructured">
             <dam:Asset jcr:primaryType="nt:unstructured">
