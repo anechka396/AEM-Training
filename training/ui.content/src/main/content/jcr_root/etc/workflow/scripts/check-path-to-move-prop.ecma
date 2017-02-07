@@ -1,0 +1,5 @@
+function check(){
+   var path = workflowData.getPayload().toString();
+   var node = workflowSession.getSession().getItem(path+"/jcr:content");
+   return !node.hasProperty("pathToMove");
+}
