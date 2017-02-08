@@ -43,8 +43,8 @@ public class MovePageWorkflow implements WorkflowProcess{
 					Node contentNode = pageNode.getNode(JcrConstants.JCR_CONTENT);
 					if(contentNode != null && contentNode.hasProperty(PATH_TO_MOVE)){
 						String pathToMove = contentNode.getProperty(PATH_TO_MOVE).getString();
-						if(jcrSession.nodeExists(pathToMove) && !pathToMove.equals(currentPath)){
-							String newPath = pathToMove + FileSystem.SEPARATOR + pageNode.getName();
+						String newPath = pathToMove + FileSystem.SEPARATOR + pageNode.getName();
+						if(jcrSession.nodeExists(pathToMove) && !newPath.equals(currentPath)){
 							if(jcrSession.nodeExists(newPath)){
 								newPath = renameNode(newPath, jcrSession);
 							}
@@ -54,7 +54,7 @@ public class MovePageWorkflow implements WorkflowProcess{
 					}
 				}
 			} catch (RepositoryException e) {
-				logger.error(e.getMessage());
+				logger.error(e.getMessage(), e);
 			}
 			
 		}

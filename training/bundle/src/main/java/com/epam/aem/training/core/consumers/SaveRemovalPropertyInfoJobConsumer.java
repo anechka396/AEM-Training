@@ -61,10 +61,10 @@ public class SaveRemovalPropertyInfoJobConsumer implements JobConsumer {
 			
 			session.save();
 		} catch(LoginException e){
-			logger.error(e.getStackTrace().toString());
+			logger.error(e.getMessage(), e);
 			return JobResult.CANCEL;
 		} catch (RepositoryException e) {
-			logger.error(e.getStackTrace().toString());
+			logger.error(e.getMessage(), e);
 			return JobResult.FAILED;
 		} finally {
 			ResourceResolverUtil.closeResourceResolver(resourceResolver);

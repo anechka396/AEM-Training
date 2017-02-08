@@ -58,7 +58,7 @@ public class ContentModificationHandler implements EventHandler {
 						pageManager.createRevision(page);
 					}
 				} catch (LoginException | WCMException e) {
-					logger.error(e.getStackTrace().toString());
+					logger.error(e.getMessage(), e);
 				} finally{
 					ResourceResolverUtil.closeResourceResolver(resourceResolver);
 				}
