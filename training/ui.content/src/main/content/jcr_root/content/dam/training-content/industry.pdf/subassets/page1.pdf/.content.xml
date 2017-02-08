@@ -2,13 +2,13 @@
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="dam:Asset">
     <jcr:content
-        jcr:lastModified="{Date}2017-02-01T13:08:29.632+03:00"
+        jcr:lastModified="{Date}2017-02-03T19:07:28.780+03:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2017-02-01T13:08:29.464+03:00"
+            dam:extracted="{Date}2017-02-03T19:07:28.474+03:00"
             dam:numPages="{Long}1"
-            dam:sha1="b6ad721c914f6d5d968e9b65a16b6596a3548bfa"
+            dam:sha1="7e9f4a94ce9d28c10b9d6bcb36cfa3fc9ffe8791"
             dam:size="{Long}274750"
             dc:format="application/pdf"
             jcr:mixinTypes="[cq:Taggable]"

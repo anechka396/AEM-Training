@@ -11,9 +11,9 @@ import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
-import org.apache.jackrabbit.core.fs.FileSystem;
 import org.apache.sling.api.SlingConstants;
 import org.apache.sling.api.resource.LoginException;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.event.jobs.Job;
 import org.apache.sling.event.jobs.consumer.JobConsumer;
@@ -22,6 +22,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.day.cq.commons.jcr.JcrConstants;
+import com.day.cq.commons.jcr.JcrUtil;
+import com.day.jcr.vault.util.Text;
 import com.epam.aem.training.core.utils.ResourceResolverUtil;
 
 @Component
@@ -31,14 +33,12 @@ import com.epam.aem.training.core.utils.ResourceResolverUtil;
 })
 public class SaveRemovalPropertyInfoJobConsumer implements JobConsumer {
 
-	private static final String BASE_PATH = "var/log/removedProperties";
+	private static final String BASE_PATH = "/var/log/removedProperties";
 	private static final String PROPERTY_NAME = "propertyName";
 	private static final String PROPERTY_PATH = "propertyPath";
 	private static final String EVENT_SERVICE = "eventService";
-	private static final String INCORRECT_SYMBOL_REGEXP = "[\\W]";
-	private static final String DASH = "-";
 	
-	private final Logger LOG = LoggerFactory.getLogger(this.getClass().getName());
+	private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 	
 	@Reference
 	ResourceResolverFactory resolverFactory;
@@ -47,60 +47,39 @@ public class SaveRemovalPropertyInfoJobConsumer implements JobConsumer {
 	public JobResult process(final Job job) {
 		String path = job.getProperty(SlingConstants.PROPERTY_PATH, String.class);
 		String [] attributes = job.getProperty(SlingConstants.PROPERTY_REMOVED_ATTRIBUTES, String[].class);
+		ResourceResolver resourceResolver = null;
 		
 		try {
-			Session session = ResourceResolverUtil.getServerResourceResolver(resolverFactory, 
-					EVENT_SERVICE).adaptTo(Session.class);
-			Node baseNode = getBaseNode(session);
+			resourceResolver = ResourceResolverUtil.getServerResourceResolver(resolverFactory, EVENT_SERVICE);
+			Session session = resourceResolver.adaptTo(Session.class);
 			
-			if(baseNode == null){
-				return JobResult.FAILED;
-			}
+			Node baseNode = JcrUtil.createPath(BASE_PATH, JcrResourceConstants.NT_SLING_FOLDER, session);
 			
 			for(String attribute : attributes){
-				if(!processAttribute(baseNode, attribute, path)){
-					return JobResult.FAILED;
-				}
+				processAttribute(baseNode, attribute, path, session);
 			}
 			
 			session.save();
-		} catch (LoginException | RepositoryException e) {
-			LOG.error(e.getMessage());
+		} catch(LoginException e){
+			logger.error(e.getStackTrace().toString());
+			return JobResult.CANCEL;
+		} catch (RepositoryException e) {
+			logger.error(e.getStackTrace().toString());
 			return JobResult.FAILED;
+		} finally {
+			ResourceResolverUtil.closeResourceResolver(resourceResolver);
 		}
 		
 		return JobResult.OK;
 	}
 	
-	private Node getBaseNode(Session session) throws RepositoryException{
-		Node tmpNode = session.getRootNode();
-		String []  pathParts = BASE_PATH.split(FileSystem.SEPARATOR);
-
-		for(String pathPart : pathParts){
-			if(tmpNode == null){
-				return null;	
-			}
-			
-			if(tmpNode.hasNode(pathPart)){
-				tmpNode = tmpNode.getNode(pathPart);
-			} else {
-				tmpNode = tmpNode.addNode(pathPart, JcrResourceConstants.NT_SLING_FOLDER);
-			}
-		}
-		return tmpNode;
-	}
-	
-	private boolean processAttribute(Node baseNode, String name, String path) throws RepositoryException{
+	private void processAttribute(Node baseNode, String name, String path, Session session) throws RepositoryException{
 		Date currentDate = new Date();
-		String nodeName = currentDate.toString().toLowerCase().replaceAll(INCORRECT_SYMBOL_REGEXP, DASH);
+		String nodeName = Text.escapeIllegalJcrChars(currentDate.toString());
 		
-		Node tmpNode = baseNode.addNode(nodeName, JcrConstants.NT_UNSTRUCTURED);
-		
-		if(tmpNode == null)
-			return false;
+		Node tmpNode = JcrUtil.createUniqueNode(baseNode, nodeName, JcrConstants.NT_UNSTRUCTURED, session);
 		
 		tmpNode.setProperty(PROPERTY_NAME, name);
 		tmpNode.setProperty(PROPERTY_PATH, path);
-		return true;
 	}
 }
