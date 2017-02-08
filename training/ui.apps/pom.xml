@@ -138,6 +138,11 @@
                             <artifactId>training.searchBundle</artifactId>
                             <target>/apps/training-app/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.epam.aem</groupId>
+                            <artifactId>training.workflowBundle</artifactId>
+                            <target>/apps/training-app/install</target>
+                        </embedded>
                     </embeddeds>
                     <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
                     <subPackages>
@@ -228,6 +233,12 @@
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.searchBundle</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.epam.aem</groupId>
+            <artifactId>training.workflowBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
