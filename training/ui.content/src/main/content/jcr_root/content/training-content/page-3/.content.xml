@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="cq:Page"
+    jcr:uuid="da5cdfa5-9b4c-4be5-bf10-b2feae30b586">
+    <jcr:content
+        cq:lastModified="{Date}2017-01-26T14:28:21.374+03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/training-app/templates/page-home"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Page without description 1"
+        sling:resourceType="training-app/components/structure/page">
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="training-app/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="training-app/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="training-app/components/content/text"
+                text="&lt;p>This is a home page&lt;/p>"
+                textIsRich="true"/>
+        </par>
+        <background-container
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/iparsys">
+            <background
+                jcr:lastModified="{Date}2017-01-26T14:28:21.371+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="training-app/components/structure/background"
+                fileReference="/content/dam/training-content/just.jpg"
+                height="0"
+                width="0"/>
+        </background-container>
+        <logo
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="training-app/components/structure/logo"/>
+    </jcr:content>
+</jcr:root>
