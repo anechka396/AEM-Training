@@ -4,28 +4,25 @@
     jcr:mixinTypes="[mix:language]"
     jcr:primaryType="sling:Folder"
     sling:basename="training">
-    <language
-        jcr:primaryType="sling:MessageEntry"
-        sling:key="language"
-        sling:message="Язык"/>
+    
     <path
         jcr:primaryType="sling:MessageEntry"
-        sling:key="path"
+        sling:key="Path"
         sling:message="Путь"/>
     <searchAPI
         jcr:primaryType="sling:MessageEntry"
-        sling:key="searchAPI"
+        sling:key="Search API"
         sling:message="API для поиска"/>
     <searchComponent
         jcr:primaryType="sling:MessageEntry"
-        sling:key="searchComponent"
+        sling:key="Search Component"
         sling:message="Компонент для поиска"/>
     <searchResult
         jcr:primaryType="sling:MessageEntry"
-        sling:key="searchResult"
+        sling:key="Search Result"
         sling:message="Результат поиска"/>
     <text
         jcr:primaryType="sling:MessageEntry"
-        sling:key="text"
+        sling:key="Text"
         sling:message="Текст"/>
 </jcr:root>

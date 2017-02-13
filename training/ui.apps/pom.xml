@@ -216,57 +216,48 @@
             <groupId>com.epam.aem</groupId>
             <artifactId>training.core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        
+        </dependency>        
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.bundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        
+        </dependency>        
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.rotateBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.searchBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.workflowBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-api</artifactId>
         </dependency>
-
         <dependency>
             <groupId>javax.jcr</groupId>
             <artifactId>jcr</artifactId>
         </dependency>
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
-        
         <dependency>
-    			<groupId>com.adobe.acs</groupId>
-    			<artifactId>acs-aem-commons-content</artifactId>
-    			<version>2.9.0</version>
-    			<type>content-package</type>
-			</dependency>
+    		<groupId>com.adobe.acs</groupId>
+    		<artifactId>acs-aem-commons-content</artifactId>
+    		<version>2.9.0</version>
+    		<type>content-package</type>
+    	</dependency>
     </dependencies>
 </project>

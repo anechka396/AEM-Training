@@ -123,7 +123,8 @@
                             <groupId>com.epam.aem</groupId>
                             <artifactId>training.core</artifactId>
                             <target>/apps/training-app/install</target>
-                        </embedded><embedded>
+                        </embedded>
+                        <embedded>
                             <groupId>com.epam.aem</groupId>
                             <artifactId>training.bundle</artifactId>
                             <target>/apps/training-app/install</target>
@@ -183,6 +184,9 @@
                             <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
+                            <properties>
+                            	<acHandling>Overwrite</acHandling> 
+                            </properties>
                         </configuration>
                      </plugin>
                  </plugins>
@@ -224,41 +228,36 @@
             <groupId>com.epam.aem</groupId>
             <artifactId>training.core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        
+        </dependency>   
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.bundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.rotateBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.searchBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        
         <dependency>
             <groupId>com.epam.aem</groupId>
             <artifactId>training.workflowBundle</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-api</artifactId>
         </dependency>
         <dependency>
-    			<groupId>com.adobe.acs</groupId>
-    			<artifactId>acs-aem-commons-content</artifactId>
-    			<version>2.9.0</version>
-    			<type>content-package</type>
-			</dependency>
+    		<groupId>com.adobe.acs</groupId>
+    		<artifactId>acs-aem-commons-content</artifactId>
+    		<version>2.9.0</version>
+    		<type>content-package</type>
+		</dependency>
     </dependencies>
 </project>
