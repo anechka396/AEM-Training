@@ -33,6 +33,11 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="training-app/components/content/helloworld"/>
+            <latestnews
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="training-app/components/content/latestnews"
+                text="&lt;p>Latest News&lt;/p>"
+                textIsRich="true"/>
         </par>
         <background-container
             jcr:primaryType="nt:unstructured"
