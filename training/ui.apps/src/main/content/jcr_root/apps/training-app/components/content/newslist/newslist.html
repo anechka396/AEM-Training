@@ -1,0 +1,12 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='training-newslist'}"/>
+
+<sly data-sly-use.model="com.epam.aem.training.core.models.NewsListModel"/>
+
+<div class="news">
+	<div class="image"></div>
+	<div class="title">${model.title}</div>
+    <div class="description">${model.description}</div>
+	<div class="date">${model.date}</div>
+    <div class="line" style="background-color: ${model.color @ context='styleToken'}"></div>
+</div>

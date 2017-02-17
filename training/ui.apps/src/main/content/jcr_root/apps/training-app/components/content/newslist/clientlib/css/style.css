@@ -1,0 +1,25 @@
+.news {
+	border: 2px solid black;
+    width: 33%;
+	height: 120px;
+}
+
+.news .image {
+	height: 30px;
+}
+
+.news .title {
+	height: 20px;
+}
+
+.news .description {
+	height: 40px;
+}
+
+.news .date {
+    height: 20px;
+}
+
+.news .line{
+	height: 10px;
+}
