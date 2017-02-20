@@ -10,7 +10,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
         <items jcr:primaryType="nt:unstructured">
-        	<column
+            <column
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Columns"
                 sling:resourceType="granite/ui/components/foundation/section">
@@ -22,157 +22,298 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-                           <column1
-                           		jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/multifield"
-                                fieldLabel="Column 1"
-                                class="foundation-layout-util-maximized-alt long-label">
-                                <field
-                                	jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
-                                    acs-commons-nested="NODE_STORE"
-                                    name="./column1">
-                                    <layout
-                                    	jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
-                                         method="absolute"/>
-                                    <items jcr:primaryType="nt:unstructured">
-                                    	<column
-                                        	jcr:primaryType="nt:unstructured"
-                                       		sling:resourceType="granite/ui/components/foundation/container">
-                                        	<items jcr:primaryType="nt:unstructured">
-                                            	<path
-                                                	jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                                    fieldLabel="Page"
-                                                    name="./path"
-                                                    rootPath="/content"
-                                                    class="foundation-layout-util-maximized-alt long-label"/>
-                                             </items>
-                                       	</column>
-                                     </items>
-                                  </field>
-                               </column1>
-                               <column2
-                           		jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/multifield"
-                                fieldLabel="Column 2"
-                                class="foundation-layout-util-maximized-alt">
-                                <field
-                                	jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
-                                    acs-commons-nested="NODE_STORE"
-                                    name="./column2">
-                                    <layout
-                                    	jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
-                                         method="absolute"/>
-                                    <items jcr:primaryType="nt:unstructured">
-                                    	<column
-                                        	jcr:primaryType="nt:unstructured"
-                                       		sling:resourceType="granite/ui/components/foundation/container">
-                                        	<items jcr:primaryType="nt:unstructured">
-                                            	<path
-                                                	jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                                    fieldLabel="Page"
-                                                    name="./path"
-                                                    rootPath="/content"/>
-                                             </items>
-                                       	</column>
-                                     </items>
-                                  </field>
-                               </column2>
-                               <column3
-                           		jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/multifield"
-                                fieldLabel="Column 3"
-                                class="foundation-layout-util-maximized-alt">
-                                <field
-                                	jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
-                                    acs-commons-nested="NODE_STORE"
-                                    name="./column3">
-                                    <layout
-                                    	jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
-                                         method="absolute"/>
-                                    <items jcr:primaryType="nt:unstructured">
-                                    	<column
-                                        	jcr:primaryType="nt:unstructured"
-                                       		sling:resourceType="granite/ui/components/foundation/container">
-                                        	<items jcr:primaryType="nt:unstructured">
-                                            	<path
-                                                	jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                                    fieldLabel="Page"
-                                                    name="./path"
-                                                    rootPath="/content"/>
-                                             </items>
-                                       	</column>
-                                     </items>
-                                  </field>
-                               </column3>
-                               <column4
-                           		jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/multifield"
-                                fieldLabel="Column 4"
-                                class="foundation-layout-util-maximized-alt">
-                                <field
-                                	jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
-                                    acs-commons-nested="NODE_STORE"
-                                    name="./column4">
-                                    <layout
-                                    	jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
-                                         method="absolute"/>
-                                    <items jcr:primaryType="nt:unstructured">
-                                    	<column
-                                        	jcr:primaryType="nt:unstructured"
-                                       		sling:resourceType="granite/ui/components/foundation/container">
-                                        	<items jcr:primaryType="nt:unstructured">
-                                            	<path
-                                                	jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                                    fieldLabel="Page"
-                                                    name="./path"
-                                                    rootPath="/content"/>
-                                             </items>
-                                       	</column>
-                                     </items>
-                                  </field>
-                               </column4>
-                               <column5
-                           		jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/multifield"
-                                fieldLabel="Column 5"
-                                class="foundation-layout-util-maximized-alt">
-                                <field
-                                	jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
-                                    acs-commons-nested="NODE_STORE"
-                                    name="./column5">
-                                    <layout
-                                    	jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
-                                         method="absolute"/>
-                                    <items jcr:primaryType="nt:unstructured">
-                                    	<column
-                                        	jcr:primaryType="nt:unstructured"
-                                       		sling:resourceType="granite/ui/components/foundation/container">
-                                        	<items jcr:primaryType="nt:unstructured">
-                                            	<path
-                                                	jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                                    fieldLabel="Page"
-                                                    name="./path"
-                                                    rootPath="/content"/>
-                                             </items>
-                                       	</column>
-                                     </items>
-                                  </field>
-                               </column5>
+                            <col1
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Column 1"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                fieldLabel="Column 1">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    acs-commons-nested="NODE_STORE"
+                                                    name="./column1">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <path
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                                    class="foundation-layout-util-maximized-alt long-label"
+                                                                    fieldLabel="Page"
+                                                                    name="./path"
+                                                                    rootPath="/content"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </column1>
+                                            <header
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                fieldLabel="Header"
+                                                name="./column1Header"/>
+                                            <hideInMobileView
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                name="./column1HideInMobile"
+                                                text="Hide in mobile view"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </col1>
+                            <col2
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Column 2"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="foundation-layout-util-maximized-alt">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    acs-commons-nested="NODE_STORE"
+                                                    name="./column2">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <path
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                                    fieldLabel="Page"
+                                                                    name="./path"
+                                                                    rootPath="/content"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </column2>
+                                            <header
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                fieldLabel="Header"
+                                                name="./column2Header"/>
+                                            <hideInMobileView
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                name="./column2HideInMobile"
+                                                text="Hide in mobile view"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </col2>
+                            <col3
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Column 1"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="foundation-layout-util-maximized-alt">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    acs-commons-nested="NODE_STORE"
+                                                    name="./column3">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <path
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                                    fieldLabel="Page"
+                                                                    name="./path"
+                                                                    rootPath="/content"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </column3>
+                                            <header
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                fieldLabel="Header"
+                                                name="./column3Header"/>
+                                            <hideInMobileView
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                name="./column3HideInMobile"
+                                                text="Hide in mobile view"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </col3>
+                            <col4
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Column 4"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column4
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="foundation-layout-util-maximized-alt">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    acs-commons-nested="NODE_STORE"
+                                                    name="./column4">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <path
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                                    fieldLabel="Page"
+                                                                    name="./path"
+                                                                    rootPath="/content"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </column4>
+                                            <header
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                fieldLabel="Header"
+                                                name="./column4Header"/>
+                                            <hideInMobileView
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                name="./column4HideInMobile"
+                                                text="Hide in mobile view"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </col4>
+                            <col5
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Column 5"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column5
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="foundation-layout-util-maximized-alt">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    acs-commons-nested="NODE_STORE"
+                                                    name="./column5">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <path
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                                    fieldLabel="Page"
+                                                                    name="./path"
+                                                                    rootPath="/content"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </column5>
+                                            <header
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                fieldLabel="Header"
+                                                name="./column5Header"/>
+                                            <hideInMobileView
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                class="foundation-layout-util-maximized-alt long-label"
+                                                name="./column5HideInMobile"
+                                                text="Hide in mobile view"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </col5>
                         </items>
                     </column>
                 </items>

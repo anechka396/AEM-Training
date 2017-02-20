@@ -3,7 +3,6 @@ package com.epam.aem.training.core.models;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -14,6 +13,7 @@ import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 import org.apache.sling.models.annotations.Source;
+import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,21 +47,6 @@ public class FooterModel {
 	@Inject @Optional
 	List<Resource> socialNetworks;
 	
-	@Inject @Optional
-	List<Resource> column1;
-	
-	@Inject @Optional
-	List<Resource> column2;
-	
-	@Inject @Optional
-	List<Resource> column3;
-	
-	@Inject @Optional
-	List<Resource> column4;
-	
-	@Inject @Optional
-	List<Resource> column5;
-	
 	@Inject @Source("sling-object")
 	ResourceResolver resourceResolver;
 	
@@ -71,16 +56,9 @@ public class FooterModel {
 	@Named("fileReference") 
 	@Default(values=EMPTY_TEXT)
 	private String backgroundImage;
-
-	@PostConstruct
-	protected void init() {
-		columns = new ArrayList<>();
-		columns.add(column1);
-		columns.add(column2);
-		columns.add(column3);
-		columns.add(column4);
-		columns.add(column5);
-	}
+	
+	@Self
+	Resource self;
 	
 	public String getCopyrighttext() {
 		return copyrighttext;
@@ -115,11 +93,13 @@ public class FooterModel {
 	
 	public List<Column> getCols() {
 		List<Column> cols = new ArrayList<>();
-		for(List<Resource> column : columns){
+		ValueMap selfProps = self.adaptTo(ValueMap.class);
+		for(int i =1; i <= 5; i++){
+			Resource column = self.getChild("column"+i);
 			Column col = new Column();
 			if(column != null){
 				List<Item> items = new ArrayList<>();
-				for(Resource resource : column){
+				for(Resource resource : column.getChildren()){
 					ValueMap props = resource.adaptTo(ValueMap.class);
 					PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
 					Page page = pageManager.getContainingPage(props.get(PATH, EMPTY_TEXT));
@@ -127,6 +107,8 @@ public class FooterModel {
 				}
 				col.setItems(items);
 			}
+			col.setHeader(selfProps.get("column"+i+"Header", EMPTY_TEXT));
+			col.setHideInMobileView(Boolean.valueOf(selfProps.get("column"+i+"HideInMobile", "false")));
 			cols.add(col);
 		}
 		return cols;

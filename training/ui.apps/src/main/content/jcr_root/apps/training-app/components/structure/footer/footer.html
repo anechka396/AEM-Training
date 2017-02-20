@@ -2,9 +2,12 @@
 <div class="footer-holder" style="min-height: 100px">
         <div class="footer-menu">
         	<sly data-sly-list.column="${model.cols}">
-        		<ul data-sly-list.item="${column.items}">
-        			<li>${item.page.navigationTitle || item.page.pageTitle}</li>
-        		</ul>
+        		<div class="${column.hideInMobileView ? 'invisible-for-mobiles' : ''}">
+        			<h3>${column.header}</h3>
+        			<ul data-sly-list.item="${column.items}">
+        				<li>${item.page.navigationTitle || item.page.pageTitle}</li>
+        			</ul>
+        		</div>
         	</sly>
         
                 <ul class="footer-column column-social" data-sly-list="${model.networks}">
