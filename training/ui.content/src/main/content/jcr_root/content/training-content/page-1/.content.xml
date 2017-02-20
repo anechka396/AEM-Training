@@ -9,6 +9,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/apps/training-app/templates/page-home"
         jcr:description="Description"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Page with description 1"
         sling:resourceType="training-app/components/structure/page">

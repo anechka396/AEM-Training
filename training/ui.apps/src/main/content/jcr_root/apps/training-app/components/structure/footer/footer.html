@@ -1,14 +1,9 @@
 <sly data-sly-use.model="com.epam.aem.training.core.models.FooterModel"/>
-<sly data-sly-test.hasBackground=${model.backgroundImage}>
-	<div class="footer-holder" style="background-image: url(${model.backgroundImage @ context='styleString'}); min-height: 100px">
-</sly>
-<sly data-sly-test=${!hasBackground}>
-	<div class="footer-holder" style="background-color: ${model.colorCode @ context='styleToken'}; min-height: 100px">
-</sly>
+<div class="footer-holder" style="min-height: 100px">
         <div class="footer-menu">
         	<sly data-sly-list.column="${model.cols}">
         		<ul data-sly-list.item="${column.items}">
-        			<li>${item.path}</li>
+        			<li>${item.page.navigationTitle || item.page.pageTitle}</li>
         		</ul>
         	</sly>
         

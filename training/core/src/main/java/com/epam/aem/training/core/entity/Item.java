@@ -2,23 +2,35 @@ package com.epam.aem.training.core.entity;
 
 import java.io.Serializable;
 
+import com.day.cq.wcm.api.Page;
+
 public class Item implements Serializable {
 	
-	private String path;
+	private Page page;
+	
 
-	public String getPath() {
-		return path;
+	public Item() {
+		super();
 	}
 
-	public void setPath(String path) {
-		this.path = path;
+	public Item(Page page) {
+		super();
+		this.page = page;
+	}
+
+	public Page getPage() {
+		return page;
+	}
+
+	public void setPage(Page page) {
+		this.page = page;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((path == null) ? 0 : path.hashCode());
+		result = prime * result + ((page == null) ? 0 : page.hashCode());
 		return result;
 	}
 
@@ -31,16 +43,16 @@ public class Item implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Item other = (Item) obj;
-		if (path == null) {
-			if (other.path != null)
+		if (page == null) {
+			if (other.page != null)
 				return false;
-		} else if (!path.equals(other.path))
+		} else if (!page.equals(other.page))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Item [path=" + path + "]";
+		return "Item [page=" + page + "]";
 	}
 }
