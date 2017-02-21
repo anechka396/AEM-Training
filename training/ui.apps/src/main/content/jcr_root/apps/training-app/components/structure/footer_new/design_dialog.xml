@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Horizon Footer Component"
+    width="700"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <columns
+                    jcr:primaryType="nt:unstructured"
+                    title="Columns"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <columns
+                            jcr:primaryType="cq:Widget"
+                            border="false"
+                            collapsed="false"
+                            collapsible="false"
+                            fieldLabel="Columns"
+                            name="columns"
+                            width="{Boolean}true"
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <columns
+                                    jcr:primaryType="cq:Widget"
+                                    cls="cq-multifield-main-panel-container cq-multifield-footer-main-panel-container"
+                                    fieldDescription="Click the '+' to add a new column"
+                                    xtype="dynamicmultipanel">
+                                    <multiConfig
+                                        jcr:primaryType="nt:unstructured"
+                                        addButtonDescription="add"
+                                        addButtonText="Add a new column"
+                                        groupName="columns"
+                                        nodeName="column"/>
+                                    <multiItems jcr:primaryType="cq:WidgetCollection">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <menuitems
+                                                jcr:primaryType="cq:Widget"
+                                                cls="cq-multifield-footer-panel-container"
+                                                fieldDescription="Click the '+' to add a new item"
+                                                xtype="dynamicmultipanel">
+                                                <multiConfig
+                                                    jcr:primaryType="nt:unstructured"
+                                                    addButtonDescription="add"
+                                                    addButtonText="Add a new item"
+                                                    groupName="menuitems"
+                                                    nodeName="item"/>
+                                                <multiItems jcr:primaryType="cq:WidgetCollection">
+                                                    <items jcr:primaryType="cq:WidgetCollection">
+                                                        <path
+                                                            jcr:primaryType="cq:Widget"
+                                                            fieldDescription="Page path"
+                                                            hasFocus="false"
+                                                            hideLabel="{Boolean}true"
+                                                            name="path"
+                                                            rootPath="/content"
+                                                            selectOnFocus="false"
+                                                            width="235"
+                                                            xtype="pathfield"/>
+                                                    </items>
+                                                </multiItems>
+                                            </menuitems>
+                                        </items>
+                                    </multiItems>
+                                </columns>
+                                <hidden
+                                    jcr:primaryType="cq:Widget"
+                                    name="./columns/hidden"
+                                    value="hidden"
+                                    xtype="hidden"/>
+                            </items>
+                        </columns>
+                    </items>
+                </columns>
+                <gradient
+                    jcr:primaryType="cq:Widget"
+                    title="Settings &amp; I18n"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <image
+                            jcr:primaryType="cq:Widget"
+                            allowUpload="{Boolean}false"
+                            border="{Boolean}false"
+                            cropParameter=""
+                            ddGroups="[media]"
+                            disableInfo="true"
+                            disableZoom="true"
+                            fileNameParameter="./image/fileName"
+                            fileReferenceParameter="./image/fileReference"
+                            height="240"
+                            hideLabel="true"
+                            name="./image/file"
+                            requestSuffix="/image.img.png"
+                            sizeLimit="100"
+                            uploadUrl="/tmp/upload/*"
+                            width="720"
+                            xtype="smartimage">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <resType
+                                    jcr:primaryType="cq:Widget"
+                                    name="./image/sling:resourceType"
+                                    value="foundation/components/image"
+                                    xtype="hidden"/>
+                            </items>
+                        </image>
+                        <legal
+                            jcr:primaryType="cq:Widget"
+                            border="false"
+                            name="legal"
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <copyrighttext
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}true"
+                                    fieldLabel="Copyright Text"
+                                    name="./copyrighttext"
+                                    xtype="textfield"/>
+                                <hideBuildInfo
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Check to hide Build Info below Copyright"
+                                    fieldLabel="Build Info"
+                                    name="./hideBuildInfo"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                                <colorCode
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}true"
+                                    emptyText="#161616"
+                                    fieldDescription="Note: background image has higher priority"
+                                    fieldLabel="Background color code"
+                                    name="./colorCode"
+                                    xtype="textfield"/>
+                            </items>
+                        </legal>
+                    </items>
+                </gradient>
+                <social
+                    jcr:primaryType="nt:unstructured"
+                    title="Social"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <socialNetworks
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}false"
+                            collapsible="{Boolean}false"
+                            name="Tabs"
+                            title="Social Networks"
+                            width="{Boolean}true"
+                            xtype="dialogfieldset">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <tabsSettings
+                                    jcr:primaryType="cq:Widget"
+                                    cls="cq-multifield-general-panel-container "
+                                    fieldDescription="Click the '+' to add a new category"
+                                    xtype="dynamicmultipanel">
+                                    <multiConfig
+                                        jcr:primaryType="nt:unstructured"
+                                        addButtonDescription="add"
+                                        groupName="socialNetworks"
+                                        nodeName="network"/>
+                                    <multiItems jcr:primaryType="cq:WidgetCollection">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <fieldSet
+                                                jcr:primaryType="nt:unstructured"
+                                                border="true"
+                                                collapsed="{Boolean}false"
+                                                collapsible="{Boolean}false"
+                                                width="500"
+                                                xtype="dialogfieldset">
+                                                <items jcr:primaryType="cq:WidgetCollection">
+                                                    <title
+                                                        jcr:primaryType="cq:Widget"
+                                                        fieldLabel="Title"
+                                                        hasFocus="true"
+                                                        name="title"
+                                                        selectOnFocus="false"
+                                                        width="98%"
+                                                        xtype="textfield">
+                                                        <listeners
+                                                            jcr:primaryType="nt:unstructured"
+                                                            afterrender="function(field){ field.el.focus = function(){};}"/>
+                                                    </title>
+                                                    <url
+                                                        jcr:primaryType="cq:Widget"
+                                                        fieldLabel="URL"
+                                                        name="url"
+                                                        width="99%"
+                                                        xtype="textfield"/>
+                                                    <iconclass
+                                                        jcr:primaryType="cq:Widget"
+                                                        fieldLabel="Icon CSS Class"
+                                                        name="iconclass"
+                                                        width="99%"
+                                                        xtype="textfield"/>
+                                                </items>
+                                            </fieldSet>
+                                        </items>
+                                    </multiItems>
+                                </tabsSettings>
+                            </items>
+                        </socialNetworks>
+                    </items>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        activate="function(){this.doLayout();}"/>
+                </social>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

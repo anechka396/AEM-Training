@@ -36,9 +36,9 @@
         <footer-container
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/iparsys">
-            <footer
+            <footer_new
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="training-app/components/structure/footer"/>
+                sling:resourceType="training-app/components/structure/footer_new"/>
         </footer-container>
     </jcr:content>
 </jcr:root>

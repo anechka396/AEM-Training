@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="fr_ch"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <calltoaction
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="calltoaction"
+        sling:message="Comment ça marche"/>
+    <copyrighttext
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="copyrighttext"
+        sling:message="© 2015 UPC Suisse Sàrl. Tous droits réservés"/>
+    <facebook
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="facebook"
+        sling:message="Facebook"/>
+    <facebooknetwork
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="facebooknetwork"
+        sling:message="Sur Facebook:"/>
+    <facebookusername
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="facebookusername"
+        sling:message="UPC Suisse Sàrl"/>
+    <followustext
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="followustext"
+        sling:message="Suivez-nous: "/>
+    <headingtext
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="headingtext"
+        sling:message="Promotions"/>
+    <twitter
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="twitter"
+        sling:message="Twitter"/>
+    <twitternetwork
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="twitternetwork"
+        sling:message="Sur Twitter"/>
+    <twitterusername
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="twitterusername"
+        sling:message="@upcch_care"/>
+</jcr:root>

@@ -14,8 +14,6 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 import org.apache.sling.models.annotations.Source;
 import org.apache.sling.models.annotations.injectorspecific.Self;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
@@ -32,8 +30,6 @@ public class FooterModel {
 	private static final String URL ="url";
 	private static final String ICONCLASS = "iconclass";
 	private static final String TITLE = "title";
-	
-	private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 	
 	@Inject @Default(values=EMPTY_TEXT)
 	String copyrighttext;
