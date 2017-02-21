@@ -1,4 +1,4 @@
-package com.epam.aem.training.core.models.new_models;
+package com.epam.aem.training.core.models.footer;
 
 import java.util.List;
 
@@ -10,8 +10,7 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 
 @Model(adaptables=Resource.class)
-public class FooterModel {
-	
+public class FooterContainer {
 	private static final String EMPTY_TEXT = "";
 
 	@Inject @Default(values=EMPTY_TEXT)
@@ -22,9 +21,6 @@ public class FooterModel {
 	
 	@Inject @Optional
 	List<SocialNetwork> socialNetworks;
-	
-	@Inject @Optional
-	List<Column> columns;
 	
 	public String getCopyrighttext() {
 		return copyrighttext;
@@ -37,10 +33,4 @@ public class FooterModel {
 	public List<SocialNetwork> getSocialNetworks() {
 		return socialNetworks;
 	}
-
-	public List<Column> getColumns() {
-		return columns;
-	}
-	
-	
 }

@@ -5,6 +5,6 @@
     cq:lastReplicationAction="Activate"
     jcr:mixinTypes="[cq:ReplicationStatus,mix:lockable]"
     jcr:primaryType="cq:Component"
-    jcr:title="Footer (Ann)"
+    jcr:title="Footer Container"
     allowedParents="[*/iparsys]"
     componentGroup="training-component"/>

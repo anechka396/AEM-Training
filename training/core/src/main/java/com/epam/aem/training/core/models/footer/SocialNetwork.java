@@ -1,4 +1,4 @@
-package com.epam.aem.training.core.models.new_models;
+package com.epam.aem.training.core.models.footer;
 
 import javax.inject.Inject;
 

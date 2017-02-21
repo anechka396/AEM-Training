@@ -4,7 +4,6 @@
     jcr:mixinTypes="[mix:language]"
     jcr:primaryType="sling:Folder"
     sling:basename="training">
-    
     <path
         jcr:primaryType="sling:MessageEntry"
         sling:key="Path"

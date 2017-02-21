@@ -23,7 +23,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/colorpicker"
                         fieldLabel="Color"
-                        name="./color"/>    
+                        name="./color"/>
                 </items>
             </column>
         </items>
