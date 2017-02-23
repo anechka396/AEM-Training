@@ -33,8 +33,7 @@
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="training-app/components/structure/logo"/>
-        
-    <footer
+        <footer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/iparsys">
             <footer-container
@@ -44,5 +43,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/iparsys"/>
             </footer-container>
-        </footer></jcr:content>
+        </footer>
+    </jcr:content>
 </jcr:root>

@@ -16,7 +16,7 @@ public class FooterContainer {
 	@Inject @Default(values=EMPTY_TEXT)
 	String copyrighttext;
 	
-	@Inject @Default(booleanValues=true)
+	@Inject @Default(booleanValues=false)
 	Boolean hideBuildInfo;
 	
 	@Inject @Optional

@@ -3,18 +3,21 @@ package com.epam.aem.training.core.models.footer;
 import javax.inject.Inject;
 
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
 
 @Model(adaptables=Resource.class)
 public class SocialNetwork {
 
-	@Inject
+	private static final String EMPTY_TEXT = "";
+	
+	@Inject @Default(values=EMPTY_TEXT)
 	String title;
 	
-	@Inject
+	@Inject @Default(values=EMPTY_TEXT)
 	String url;
 	
-	@Inject
+	@Inject @Default(values=EMPTY_TEXT)
 	String iconclass;
 
 	public String getTitle() {

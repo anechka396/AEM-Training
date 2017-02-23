@@ -1,6 +1,6 @@
 <sly data-sly-use.model="com.epam.aem.training.core.models.footer.FooterColumn"/>
-<div class="cq-placeholder"  data-emptytext="Footer Column" data-sly-test="${!(model.header || model.items)}"></div>
-<section class="flex-column ${model.hideInMobileView ? 'invisible-for-mobiles' : ''}">
+<div class="cq-placeholder"  data-emptytext="Footer Column" data-sly-test.empty="${!(model.header || model.items)}"></div>
+<section class="flex-column ${model.hideInMobileView ? 'invisible-for-mobiles' : ''}" data-sly-test="${!empty}">
 	<header class="footer-column-title">${model.header}</header>
 	<content class="footer-column-content">
 		<ul class="footer-list" data-sly-list.item="${model.items}">

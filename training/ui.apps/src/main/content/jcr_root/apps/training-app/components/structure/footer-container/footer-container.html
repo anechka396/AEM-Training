@@ -1,7 +1,8 @@
 <sly data-sly-use.model="com.epam.aem.training.core.models.footer.FooterContainer"/>
+<div class="cq-placeholder"  data-emptytext="Footer Configuration"></div>
 <footer class="footer">
 	<section class="flex-column last-column">
-		<div data-sly-resource="${'footer-columns' @ resourceType='wcm/foundation/components/iparsys'}"></div>
+		<div data-sly-resource="${'footer-columns' @ resourceType='wcm/foundation/components/iparsys'}" data-sly-unwrap></div>
 		<content class="footer-column-content invisible-for-mobiles">
 			<ul class="footer-list" data-sly-list="${model.socialNetworks}">
 				<li class="footer-menu-item">
@@ -10,7 +11,7 @@
 			</ul>
 		</content>
 		<footer class="footer-column-footer">
-			<p class="footer-build-info">Build: 1.1.127 (05780ca, 2016-11-30)</p>
+			<p class="footer-build-info" data-sly-test="${!model.hideBuildInfo}">Build: 1.1.127 (05780ca, 2016-11-30)</p>
 			<p class="footer-copyright">${model.copyrighttext}</p>
 		</footer>
 	</section>
