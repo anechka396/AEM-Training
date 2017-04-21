@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:description="Template with focus on content."
-    jcr:primaryType="cq:Template"
-    jcr:title="Training Site Content Page"
-    allowedPaths="[/content/training-content/.+]"
-    ranking="{Long}100">
+    jcr:primaryType="cq:Page">
     <jcr:content
+        cq:template="/apps/training-app/templates/page-home"
         jcr:primaryType="cq:PageContent"
+        jcr:title="Test"
         sling:resourceType="training-app/components/structure/page">
         <title
             jcr:primaryType="nt:unstructured"
@@ -20,7 +18,7 @@
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="training-app/components/content/text"
-                text="&lt;p>This is a content page&lt;/p>"
+                text="&lt;p>This is a home page&lt;/p>"
                 textIsRich="true"/>
         </par>
         <background-container
@@ -41,7 +39,8 @@
                 sling:resourceType="training-app/components/structure/footer-container">
                 <footer-columns
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/iparsys"/>
+                    sling:resourceType="wcm/foundation/components/iparsys">
+                </footer-columns>
             </footer-container>
         </footer>
     </jcr:content>

@@ -43,7 +43,11 @@
                             artifactId2;inline=true
                         </Embed-Dependency>
                         -->
-                        <Sling-Model-Packages>com.epam.aem.training.core</Sling-Model-Packages>
+                        <Embed-Dependency>jackson-databind,jackson-core,jackson-annotations;scope=compile</Embed-Dependency>
+                        <Embed-Directory>OSGI-INF/lib</Embed-Directory>
+                        <_exportcontents>com.fasterxml.jackson.*</_exportcontents>
+                        <Export-Package>com.epam.aem.training.core.models.footer</Export-Package>
+                        <Sling-Model-Packages>com.epam.aem.training.core.models.footer</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
@@ -126,6 +130,21 @@
         <dependency>
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
+        </dependency>
+        <dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>2.8.6</version>
+		</dependency>
+        <dependency>
+        	<groupId>com.fasterxml.jackson.core</groupId>
+        	<artifactId>jackson-core</artifactId>
+        	<version>2.8.6</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.fasterxml.jackson.core</groupId>
+        	<artifactId>jackson-annotations</artifactId>
+        	<version>2.8.6</version>
         </dependency>
     </dependencies>
 </project>
