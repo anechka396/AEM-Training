@@ -21,7 +21,6 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <description>artifact</description>
-    Conflict 2
     <modules>
         <module>core</module>
         <module>bundle</module>
